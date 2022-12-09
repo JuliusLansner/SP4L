@@ -1,0 +1,64 @@
+@startuml
+!pragma layout smetana
+
+class Main
+class mainMenu
+class gameDisplay
+class Player
+class Abilities
+class HP
+class Assignments
+class Map
+class keyInput
+class JPanel
+class ImageIO
+interface keyListener
+interface runnable
+
+package Tile <<Node>> {
+ class Tile
+}
+
+Player : - String name
+Player : - int hp
+Player : - int score
+Player : - void moveUp()
+Player : - void moveDown()
+Player : - void moveRight()
+Player : - void moveLeft()
+Player : - void useAbility()
+gameDisplay : - void startGameThread()
+gameDisplay : - void paint(Graphics g)
+gameDisplay : - int orginalTileSize
+gameDisplay : - int scale
+gameDisplay : - int tileSize
+gameDisplay : - int maxScreenCol
+gameDisplay : - int MaxscreenRow
+gameDisplay : - int screenWidth
+gameDisplay : - int screenHeight
+Map : - void getTiles()
+Map : - void makeTileMap()
+Map : + ArrayList<BufferedImage> tiles
+mainMenu : + button ()
+
+
+keyInput <|-- keyListener
+gameDisplay <|-- JPanel
+JPanel -[dashed]-> runnable
+
+
+package Abilty <<Node>> {
+  class Class1
+}
+
+Main : - TextUI textUI;
+Main : + ArrayList<Player> players
+Main : + void gameSetup()
+Main : - createPlayers(ArrayList<String> data)
+
+Main -- FileIO
+Main-- Player
+
+
+
+@enduml
