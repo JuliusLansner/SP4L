@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyListener;
+import java.io.IOException;
 
 public class ScreenDisplay extends JPanel implements Runnable {
     JFrame screen;
@@ -8,11 +9,11 @@ public class ScreenDisplay extends JPanel implements Runnable {
     KeyControl keys = new KeyControl();
      int rectPositionx = 100;
      int rectPositiony = 100;
-
+MapMaker map = new MapMaker();
      int fps = 60;
 
     private JPanel display(){
-        this.setPreferredSize(new Dimension(500,800));
+        this.setPreferredSize(new Dimension(768,576));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
         this.addKeyListener(keys);
@@ -38,14 +39,14 @@ public class ScreenDisplay extends JPanel implements Runnable {
     public void run() {
         long systemTime = System.nanoTime();
         long drawInterval = 1000000000/fps; // 1 second split in 60
-        long totalTimePlusInterval = System.nanoTime() + drawInterval;
-        long remainingTime = totalTimePlusInterval - System.nanoTime();// the time thread should sleep after functions have run.
 
-        long remainingTimeinMili = remainingTime/1000000; //Changed to mili to put into sleep function.
 
         while(gameThread!=null){ //Gameloop that runs this until thread stops
             updatePosition();
             repaint();//Runs paint method
+            long totalTimePlusInterval = System.nanoTime() + drawInterval;
+            long remainingTime = totalTimePlusInterval - System.nanoTime();// the time thread should sleep after functions have run.
+            long remainingTimeinMili = remainingTime/1000000; //Changed to mili to put into sleep function.
             try {
                 Thread.sleep(remainingTimeinMili);
             } catch (InterruptedException e) {
@@ -73,8 +74,15 @@ public class ScreenDisplay extends JPanel implements Runnable {
     }
     public void paint(Graphics g){
         this.paintComponent(g);
-        g.setColor(Color.white);
-        g.fillRect(rectPositionx,rectPositiony,20,20);//Eksempel på tegning.
+
+        try {
+            map.drawMap(g);
+            g.setColor(Color.white);
+            g.fillRect(rectPositionx,rectPositiony,40,40);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         g.dispose();
+
     }
 }

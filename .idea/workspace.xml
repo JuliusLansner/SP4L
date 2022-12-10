@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="769b6dd9-8615-469c-8202-38522dd01c1d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/tiles/GulvtæppeHøjre.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/Gulvtæppevenstreside.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/New Piskel.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/rødfarve.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ScreenDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,10 +43,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/malde/intelliJ/SystemNanotime",
+    "last_opened_file_path": "C:/Users/malde/intelliJ/SP4L",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\malde\intelliJ\SP4L\src\tiles" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,7 +61,8 @@
       <option name="presentableId" value="Default" />
       <updated>1670582653492</updated>
       <workItem from="1670582654671" duration="277000" />
-      <workItem from="1670583270943" duration="15007000" />
+      <workItem from="1670583270943" duration="18282000" />
+      <workItem from="1670705273163" duration="2673000" />
     </task>
     <servers />
   </component>
