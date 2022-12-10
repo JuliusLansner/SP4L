@@ -5,5 +5,6 @@ public class Main {
         window.screen();
 
         window.runGameThread();
+
     }
 }
