@@ -9,6 +9,8 @@ public class ScreenDisplay extends JPanel implements Runnable {
      int rectPositionx = 100;
      int rectPositiony = 100;
 
+     int fps = 60;
+
     private JPanel display(){
         this.setPreferredSize(new Dimension(500,800));
         this.setBackground(Color.black);
@@ -16,11 +18,6 @@ public class ScreenDisplay extends JPanel implements Runnable {
         this.addKeyListener(keys);
         this.setFocusable(true);//sets it to be focused on key input
         return this;
-    }
-
-    public void changePosition(){
-        int rectPositionx = 100;
-        int rectPositiony = 100;
     }
 
     public void screen(){
@@ -40,16 +37,21 @@ public class ScreenDisplay extends JPanel implements Runnable {
     @Override
     public void run() {
         long systemTime = System.nanoTime();
-        System.out.println(systemTime);
+        long drawInterval = 1000000000/fps; // 1 second split in 60
+        long totalTimePlusInterval = System.nanoTime() + drawInterval;
+        long remainingTime = totalTimePlusInterval - System.nanoTime();// the time thread should sleep after functions have run.
+
+        long remainingTimeinMili = remainingTime/1000000; //Changed to mili to put into sleep function.
+
         while(gameThread!=null){ //Gameloop that runs this until thread stops
             updatePosition();
             repaint();//Runs paint method
             try {
-                Thread.sleep(10);
+                Thread.sleep(remainingTimeinMili);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
+            updatePosition();
         }
     }
 
