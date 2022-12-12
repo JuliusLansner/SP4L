@@ -7,8 +7,10 @@ public class ScreenDisplay extends JPanel implements Runnable {
     JFrame screen;
     Thread gameThread;
     KeyControl keys = new KeyControl();
-    Player player = new Player(keys);
+    int player1H = 40;
+    Player player1 = new Player(keys,player1H);
     MapMaker map = new MapMaker();
+    HealthBar health = new HealthBar();
 
     public int tileSize = 48;
     int screenCol = 20;
@@ -65,14 +67,17 @@ public class ScreenDisplay extends JPanel implements Runnable {
     }
 
     public void updatePosition(){
-player.update();
+player1.update();
 
     }
     public void paint(Graphics g){
         this.paintComponent(g);
+
         try {
             map.drawMap(g);
-            player.draw(g);
+            updatePosition();
+            player1.draw(g);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

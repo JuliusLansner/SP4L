@@ -11,11 +11,13 @@ import java.io.IOException;
 //REMOVE CODE IN 'draw', REPLACE WITH.
 public class Player extends Entity {
 
-
+    int healthBar;
     KeyControl keyH;
+    HealthBar health = new HealthBar();
 
-    public Player(KeyControl keyH) {
+    public Player(KeyControl keyH, int healthBar) {
         this.keyH = keyH;
+        this.healthBar = healthBar;
 
         setDefaultValues();
         getPlayerImage();
@@ -113,7 +115,7 @@ public class Player extends Entity {
                 break;
         }
         g.drawImage(image, x, y, 48, 48, null);
-
+        health.drawHealth(g,x,y-10,healthBar);
 
     }
 }
