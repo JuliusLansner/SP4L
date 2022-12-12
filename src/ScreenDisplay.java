@@ -7,6 +7,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
     JFrame screen;
     Thread gameThread;
     KeyControl keys = new KeyControl();
+    Player player = new Player(keys);
 
     public int tileSize = 48;
     int screenCol = 20;
@@ -63,26 +64,13 @@ public class ScreenDisplay extends JPanel implements Runnable {
     }
 
     public void updatePosition(){
+player.update();
 
-        if(keys.upPressed==true){
-            rectPositiony-=4;
-        }
-
-        if(keys.downPressed==true){
-            rectPositiony+=4;
-        }
-        if(keys.rightPressed==true){
-            rectPositionx+=4;
-        }
-        if(keys.leftPressed==true){
-            rectPositionx-=4;
-        }
     }
     public void paint(Graphics g){
         this.paintComponent(g);
+player.draw(g);
 
-        g.setColor(Color.white);
-        g.fillRect(rectPositionx,rectPositiony,40,40);
 
         g.dispose();
 

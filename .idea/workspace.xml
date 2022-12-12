@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="769b6dd9-8615-469c-8202-38522dd01c1d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+    <list default="true" id="736d1a81-d017-40f2-be14-37d6f5812c5e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_down_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_down_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_down_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_down_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_left_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_left_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_left_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_left_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_right_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_right_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_right_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_right_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_up_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_up_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_up_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_up_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScreenDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +54,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\malde\intelliJ\SP4L\src" />
       <recent name="C:\Users\malde\intelliJ\SP4L\src\tiles" />
       <recent name="C:\Users\malde\intelliJ\SP4L\maps" />
     </key>

@@ -1,4 +1,4 @@
-package src;
+
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -11,11 +11,10 @@ import java.io.IOException;
 //REMOVE CODE IN 'draw', REPLACE WITH.
 public class Player extends Entity {
 
-    GamePanel gp;
-    KeyHandler keyH;
 
-    public Player(GamePanel gp, KeyHandler keyH) {
-        this.gp = gp;
+    KeyControl keyH;
+
+    public Player(KeyControl keyH) {
         this.keyH = keyH;
 
         setDefaultValues();
@@ -32,14 +31,14 @@ public class Player extends Entity {
 
     public void getPlayerImage() {
         try {
-            up1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_1.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_2.png"));
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_1.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_2.png"));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_1.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_2.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_1.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_2.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/res/boy_up_1.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/res/boy_up_2.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/res/boy_down_1.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/res/boy_down_2.png"));
+            left1 = ImageIO.read(getClass().getResourceAsStream("/res/boy_left_1.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/res/boy_left_2.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/res/boy_right_1.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/res/boy_right_2.png"));
 
         }catch(IOException e) {
             e.printStackTrace();
@@ -72,12 +71,10 @@ public class Player extends Entity {
             spriteCounter = 0;
         }
     }
-    //   }
+    
 
 
-    public void draw(Graphics2D g2) {
-//        g2.setColor(Color.white);
-//        g2.fillRect(x, y, gp.tileSize, gp.tileSize);
+    public void draw(Graphics g) {
 
         BufferedImage image = null;
 
@@ -115,7 +112,7 @@ public class Player extends Entity {
                 }
                 break;
         }
-        g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
+        g.drawImage(image, x, y, 48, 48, null);
 
 
     }
