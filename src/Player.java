@@ -15,6 +15,8 @@ public class Player extends Entity {
     boolean attacking;
     KeyControl keyH;
     HealthBar health = new HealthBar();
+
+    FireBall fireball = new FireBall();
     KeyControlAbilities keyQ;
 
     public Player(KeyControl keyH, int healthBar, KeyControlAbilities keyQ) {
@@ -171,6 +173,10 @@ public class Player extends Entity {
         g.drawImage(image, x, y, 48, 48, null);
         health.drawHealth(g,x,y-10,healthBar);
         g.drawImage(image1,x,y,48,48,null);
+
+        if(keyQ.abilityPressed==true) {
+                fireball.draw(g, x, y + 10);
+        }
 
     }
 }

@@ -5,13 +5,15 @@ import java.io.IOException;
 
 public class ScreenDisplay extends JPanel implements Runnable {
     JFrame screen;
+    FireBall fireball = new FireBall();
     Thread gameThread;
     KeyControl keys = new KeyControl('W','S','A','D');
     KeyControl keys2 = new KeyControl('I','K','J','L');
-    KeyControlAbilities keyQ = new KeyControlAbilities();
+    KeyControlAbilities player1AB = new KeyControlAbilities('E');
+    KeyControlAbilities player2AB = new KeyControlAbilities('Q');
     int player1H = 40;
-    Player player1 = new Player(keys,player1H,keyQ);
-    Player player2 = new Player(keys2,player1H,keyQ);
+    Player player1 = new Player(keys,player1H,player1AB);
+    Player player2 = new Player(keys2,player1H,player2AB);
 
 
 
@@ -36,7 +38,8 @@ public class ScreenDisplay extends JPanel implements Runnable {
 
         this.addKeyListener(keys2);
 
-        this.addKeyListener(keyQ);
+        this.addKeyListener(player1AB);
+        this.addKeyListener(player2AB);
 
         this.setFocusable(true);//sets it to be focused on key input
         return this;
