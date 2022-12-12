@@ -7,13 +7,19 @@ public class ScreenDisplay extends JPanel implements Runnable {
     JFrame screen;
     Thread gameThread;
     KeyControl keys = new KeyControl();
-     int rectPositionx = 100;
-     int rectPositiony = 100;
-MapMaker map = new MapMaker();
-     int fps = 60;
+
+    public int tileSize = 48;
+    int screenCol = 20;
+    int screenRow = 16;
+    int screenWidth = tileSize * screenCol;
+    int screenHeight = tileSize * screenRow;
+    int fps = 60;
+    int rectPositionx = 100;
+    int rectPositiony = 100;
+
 
     private JPanel display(){
-        this.setPreferredSize(new Dimension(768,576));
+        this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
         this.addKeyListener(keys);
@@ -37,22 +43,22 @@ MapMaker map = new MapMaker();
 
     @Override
     public void run() {
-        long systemTime = System.nanoTime();
-        long drawInterval = 1000000000/fps; // 1 second split in 60
-
-
+        long drawInterval = 1000000000/fps;// 1 second split in 60
+        long totalTimePlusInterval = System.nanoTime() + drawInterval;
         while(gameThread!=null){ //Gameloop that runs this until thread stops
             updatePosition();
             repaint();//Runs paint method
-            long totalTimePlusInterval = System.nanoTime() + drawInterval;
-            long remainingTime = totalTimePlusInterval - System.nanoTime();// the time thread should sleep after functions have run.
-            long remainingTimeinMili = remainingTime/1000000; //Changed to mili to put into sleep function.
+            long remainingTimeInMili = (totalTimePlusInterval-System.nanoTime())/1000000;
+            if(remainingTimeInMili<0){
+                remainingTimeInMili=0;
+            }
+
             try {
-                Thread.sleep(remainingTimeinMili);
+                Thread.sleep(remainingTimeInMili);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            updatePosition();
+            totalTimePlusInterval+=drawInterval;
         }
     }
 
@@ -75,14 +81,11 @@ MapMaker map = new MapMaker();
     public void paint(Graphics g){
         this.paintComponent(g);
 
-        try {
-            map.drawMap(g);
-            g.setColor(Color.white);
-            g.fillRect(rectPositionx,rectPositiony,40,40);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        g.setColor(Color.white);
+        g.fillRect(rectPositionx,rectPositiony,40,40);
+
         g.dispose();
 
     }
+
 }
