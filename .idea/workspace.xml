@@ -4,12 +4,6 @@
     <list default="true" id="736d1a81-d017-40f2-be14-37d6f5812c5e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MapMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScreenDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiles1/GulvtæppeHøjre.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/GulvtæppeHøjre.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiles1/Gulvtæppevenstreside.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Gulvtæppevenstreside.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiles1/HelBane.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/HelBane.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiles1/New Piskel.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/New Piskel.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiles1/rødfarve.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/rødfarve.gif" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +38,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "last_opened_file_path": "C:/Users/malde/intelliJ/SP4L/src/tiles1",
+    "last_opened_file_path": "C:/Users/malde/intelliJ/VisualTry",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
