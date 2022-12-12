@@ -8,6 +8,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
     Thread gameThread;
     KeyControl keys = new KeyControl();
     Player player = new Player(keys);
+    MapMaker map = new MapMaker();
 
     public int tileSize = 48;
     int screenCol = 20;
@@ -69,10 +70,9 @@ player.update();
     }
     public void paint(Graphics g){
         this.paintComponent(g);
-        MapMaker map = new MapMaker(g);
-player.draw(g);
         try {
             map.drawMap(g);
+            player.draw(g);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -3,17 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="736d1a81-d017-40f2-be14-37d6f5812c5e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/boy_down_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_down_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/boy_down_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_down_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/boy_left_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_left_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/boy_left_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_left_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/boy_right_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_right_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/boy_right_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_right_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/boy_up_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_up_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/boy_up_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/boy_up_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ScreenDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles1/GulvtæppeHøjre.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/GulvtæppeHøjre.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles1/Gulvtæppevenstreside.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/Gulvtæppevenstreside.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles1/HelBane.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/HelBane.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles1/New Piskel.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/New Piskel.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiles1/rødfarve.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiles/rødfarve.gif" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,19 +36,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/malde/intelliJ/VisualTry&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-19",
+    "last_opened_file_path": "C:/Users/malde/intelliJ/SP4L/src/tiles1",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\malde\intelliJ\SP4L\src\tiles1" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\malde\intelliJ\SP4L\src" />
       <recent name="C:\Users\malde\intelliJ\SP4L\src\tiles" />
