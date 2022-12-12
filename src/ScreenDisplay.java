@@ -6,11 +6,19 @@ import java.io.IOException;
 public class ScreenDisplay extends JPanel implements Runnable {
     JFrame screen;
     Thread gameThread;
+<<<<<<< Updated upstream
     KeyControl keys = new KeyControl('W','S','A','D');
     KeyControl keys2 = new KeyControl('I','K','J','L');
     int player1H = 40;
     Player player1 = new Player(keys,player1H);
     Player player2 = new Player(keys2,player1H);
+=======
+    KeyControl keys = new KeyControl();
+    KeyControlAbilities keyQ = new KeyControlAbilities();
+
+    int player1H = 40;
+    Player player1 = new Player(keys,player1H,keyQ);
+>>>>>>> Stashed changes
     MapMaker map = new MapMaker();
     HealthBar health = new HealthBar();
 
@@ -29,7 +37,11 @@ public class ScreenDisplay extends JPanel implements Runnable {
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
         this.addKeyListener(keys);
+<<<<<<< Updated upstream
         this.addKeyListener(keys2);
+=======
+        this.addKeyListener(keyQ);
+>>>>>>> Stashed changes
         this.setFocusable(true);//sets it to be focused on key input
         return this;
     }
@@ -82,6 +94,8 @@ player2.update();
             updatePosition();
             player1.draw(g);
             player2.draw(g);
+
+
 
         } catch (IOException e) {
             throw new RuntimeException(e);

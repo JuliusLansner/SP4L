@@ -12,15 +12,21 @@ import java.io.IOException;
 public class Player extends Entity {
 
     int healthBar;
+    boolean attacking;
     KeyControl keyH;
     HealthBar health = new HealthBar();
+    KeyControlAbilities keyQ;
 
-    public Player(KeyControl keyH, int healthBar) {
+    public Player(KeyControl keyH, int healthBar, KeyControlAbilities keyQ) {
         this.keyH = keyH;
         this.healthBar = healthBar;
+        this.keyQ = keyQ;
 
         setDefaultValues();
+        getAttackImage();
+
         getPlayerImage();
+
     }
 
     public void setDefaultValues() {
@@ -47,10 +53,32 @@ public class Player extends Entity {
         }
     }
 
+    public void getAttackImage(){
+        try {
+            attackUp1 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_up_1.png"));
+            attackUp2 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_up_2.png"));
+            attackDown1 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_down_1.png"));
+            attackDown2 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_down_2.png"));
+            attackLeft1 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_left_1.png"));
+            attackLeft2 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_left_2.png"));
+            attackRight1 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_right_1.png"));
+            attackRight2 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_right_2.png"));
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
     public void update() {
         //ANIMATION WHILE STANDING STILL
         //if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
-        if (keyH.upPressed == true) {
+        //if (attacking = true) { //something is wrong here...
+
+        if (keyQ.qPressed) { //Might need to change something here?
+            playerAttack();
+
+
+        }else if (keyH.upPressed == true) {
             direction = "up";
             y -= speed;
         } else if (keyH.downPressed == true) {
@@ -73,49 +101,77 @@ public class Player extends Entity {
             spriteCounter = 0;
         }
     }
-    
+
+    public void playerAttack() {
+
+        spriteCounter++;
+
+        if (spriteCounter <= 5){ //show attack image 1 during first five frames
+            spriteNum = 1;
+        }
+        if (spriteCounter > 5 && spriteCounter <= 25){
+            spriteNum = 2;
+        }
+        if (spriteCounter > 25){
+            spriteNum = 1;
+            spriteCounter = 0;
+            attacking = false;
+        }
+    }
+
 
 
     public void draw(Graphics g) {
 
         BufferedImage image = null;
+        BufferedImage image1 = null;
 
+        //Depending on players direction and attacking stage, a diffrent image is shown.
         switch(direction) {
             case "up":
-                if(spriteNum == 1) {
-                    image = up1;
+                if (!attacking){
+                    if(spriteNum == 1) {image = up1;}
+                    if(spriteNum == 2) {image = up2;}
                 }
-                if(spriteNum == 2) {
-                    image = up2;
+                if (attacking){
+                    if(spriteNum == 1) {image1 = attackUp1;}
+                    if(spriteNum == 2) {image1 = attackUp2;}
                 }
                 break;
             case "down":
-                if(spriteNum == 1) {
-                    image = down1;
+                if (!attacking){
+                    if(spriteNum == 1) {image = down1;}
+                    if(spriteNum == 2) {image = down2;}
                 }
-                if(spriteNum == 2) {
-                    image = down2;
+                if (attacking) {
+                    if (spriteNum == 1) {image1 = attackDown1;}
+                    if (spriteNum == 2) {image1 = attackDown2;}
                 }
                 break;
             case "left":
-                if(spriteNum == 1) {
-                    image = left1;
+                if (!attacking){
+                    if(spriteNum == 1) {image = left1;}
+                    if(spriteNum == 2) {image = left2;}
                 }
-                if(spriteNum == 2) {
-                    image = left2;
+                if (attacking){
+                    if(spriteNum == 1) {image1 = attackLeft1;}
+                    if(spriteNum == 2) {image1 = attackLeft2;}
                 }
                 break;
             case "right":
-                if(spriteNum == 1) {
-                    image = right1;
+                if (!attacking){
+                    if(spriteNum == 1) {image = right1;}
+                    if(spriteNum == 2) {image = right2;}
                 }
-                if(spriteNum == 2) {
-                    image = right2;
+                if (attacking){
+                    if(spriteNum == 1) {image1 = attackRight1;}
+                    if(spriteNum == 2) {image1 = attackRight2;}
                 }
                 break;
         }
         g.drawImage(image, x, y, 48, 48, null);
         health.drawHealth(g,x,y-10,healthBar);
+        g.drawImage(image1,x,y,48,48,null);
 
     }
 }
