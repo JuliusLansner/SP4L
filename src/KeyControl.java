@@ -3,7 +3,13 @@ import java.awt.event.KeyListener;
 
 public class KeyControl implements KeyListener {
 boolean upPressed, downPressed, rightPressed, leftPressed;
-
+char up, down, left, right;
+public KeyControl(char up, char down, char left, char right){
+    this.up = up;
+    this.down = down;
+    this.left = left;
+    this.right = right;
+}
 
     public void keyTyped(KeyEvent e) {
 
@@ -13,18 +19,18 @@ boolean upPressed, downPressed, rightPressed, leftPressed;
     public void keyPressed(KeyEvent e) {
     int keyTyped = e.getKeyCode();
 
-     if(keyTyped==KeyEvent.VK_W){
+     if(keyTyped == up){
          upPressed = true;
      }
-        if(keyTyped==KeyEvent.VK_S){
+        if(keyTyped==down){
             downPressed = true;
         }
 
-        if(keyTyped==KeyEvent.VK_A){
+        if(keyTyped==left){
             leftPressed = true;
         }
 
-        if(keyTyped==KeyEvent.VK_D){
+        if(keyTyped==right){
             rightPressed = true;
         }
     }
@@ -32,18 +38,18 @@ boolean upPressed, downPressed, rightPressed, leftPressed;
     @Override
     public void keyReleased(KeyEvent e) {
         int keyTyped = e.getKeyCode();
-        if(keyTyped==KeyEvent.VK_W){
+        if(keyTyped==up){
             upPressed = false;
         }
-        if(keyTyped==KeyEvent.VK_S){
+        if(keyTyped==down){
             downPressed = false;
         }
 
-        if(keyTyped==KeyEvent.VK_A){
+        if(keyTyped==left){
             leftPressed = false;
         }
 
-        if(keyTyped==KeyEvent.VK_D){
+        if(keyTyped==right){
             rightPressed = false;
         }
 

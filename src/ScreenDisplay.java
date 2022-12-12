@@ -6,9 +6,11 @@ import java.io.IOException;
 public class ScreenDisplay extends JPanel implements Runnable {
     JFrame screen;
     Thread gameThread;
-    KeyControl keys = new KeyControl();
+    KeyControl keys = new KeyControl('W','S','A','D');
+    KeyControl keys2 = new KeyControl('I','K','J','L');
     int player1H = 40;
     Player player1 = new Player(keys,player1H);
+    Player player2 = new Player(keys2,player1H);
     MapMaker map = new MapMaker();
     HealthBar health = new HealthBar();
 
@@ -27,6 +29,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
         this.addKeyListener(keys);
+        this.addKeyListener(keys2);
         this.setFocusable(true);//sets it to be focused on key input
         return this;
     }
@@ -68,6 +71,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
 
     public void updatePosition(){
 player1.update();
+player2.update();
 
     }
     public void paint(Graphics g){
@@ -77,6 +81,7 @@ player1.update();
             map.drawMap(g);
             updatePosition();
             player1.draw(g);
+            player2.draw(g);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
