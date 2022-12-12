@@ -80,7 +80,12 @@ public class ScreenDisplay extends JPanel implements Runnable {
     }
     public void paint(Graphics g){
         this.paintComponent(g);
-
+MapMaker map = new MapMaker();
+        try {
+            map.drawMap(g);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         g.setColor(Color.white);
         g.fillRect(rectPositionx,rectPositiony,40,40);
 
