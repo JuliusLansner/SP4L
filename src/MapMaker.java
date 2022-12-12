@@ -1,7 +1,6 @@
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,11 +17,10 @@ public MapMaker(Graphics g){
     private BufferedImage[] loadMapTiles(){
          BufferedImage[]tiles = new BufferedImage[10];
         try {
-            tiles[0] = ImageIO.read(getClass().getResourceAsStream("/tiles/earth.png"));
-            tiles[1] = ImageIO.read(getClass().getResourceAsStream("/tiles/GulvtæppeHøjre.gif"));
-            tiles[2] = ImageIO.read(getClass().getResourceAsStream("/tiles/Gulvtæppevenstreside.gif"));
-            tiles[3] = ImageIO.read(getClass().getResourceAsStream("/tiles/rødfarve.gif"));
-            tiles[4] = ImageIO.read(getClass().getResourceAsStream("/tiles/HelBane"));
+            tiles[0] = ImageIO.read(getClass().getResourceAsStream("/tiles1/HelBane"));
+            tiles[1] = ImageIO.read(getClass().getResourceAsStream("/tiles1/GulvtæppeHøjre.gif"));
+            tiles[2] = ImageIO.read(getClass().getResourceAsStream("/tiles1/Gulvtæppevenstreside.gif"));
+            tiles[3] = ImageIO.read(getClass().getResourceAsStream("/tiles1/rødfarve.gif"));
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -40,9 +38,7 @@ public MapMaker(Graphics g){
         tileNumber.add(read.nextInt());
     }
 
-    int col = 20;
-    int row = 16;
-    int count = 0;
+   g.drawImage(loadMapTiles()[0],0,0,48,48,null );
 
 
   }

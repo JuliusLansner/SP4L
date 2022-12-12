@@ -69,7 +69,13 @@ player.update();
     }
     public void paint(Graphics g){
         this.paintComponent(g);
+        MapMaker map = new MapMaker(g);
 player.draw(g);
+        try {
+            map.drawMap(g);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
 
         g.dispose();
