@@ -10,7 +10,7 @@ import java.io.IOException;
 //IN GamePanel, remove code in 'update', REPLACE WITH player.update();
 //REMOVE CODE IN 'draw', REPLACE WITH.
 public class Player extends Entity {
-
+    int ability1 = x;
     int healthBar;
     boolean attacking;
     KeyControl keyH;
@@ -36,6 +36,8 @@ public class Player extends Entity {
         y = 100;
         speed = 4;
         direction = "down";
+        ability1x = 0;
+        ability1y = 0;
     }
 
     public void getPlayerImage() {
@@ -175,7 +177,21 @@ public class Player extends Entity {
         g.drawImage(image1,x,y,48,48,null);
 
         if(keyQ.abilityPressed==true) {
-                fireball.draw(g, x, y + 10);
+
+                fireball.draw(g, x+ability1x, y+ability1y + 10);
+                if(direction.equals("right")){
+                    ability1x+=4;
+                }
+                if(direction.equals("left")){
+                    ability1x--;
+                }
+                if(direction.equals("down")){
+                    ability1y++;
+                }
+                if(direction.equals("up")){
+                    ability1y--;
+                }
+
         }
 
     }
