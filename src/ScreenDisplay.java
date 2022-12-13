@@ -53,6 +53,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
         screen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//closes the program when the window is closed
         screen.pack();// Does so the screen size adjust to the JPanels size
 
+
     }
 
     public void runGameThread(){//Starts the thread which makes the run method start.
