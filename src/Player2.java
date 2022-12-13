@@ -7,20 +7,20 @@ public class Player2 extends Entity{
 
     int ability1 = x;
     int healthBar;
-    boolean attacking;
     KeyControl keyH;
     HealthBar health = new HealthBar();
     FireBall fireball = new FireBall();
-    KeyControlAbilities keyQ;
+    KeyControlAbilities keyO;
 
-    public Player2(KeyControl keyH, int healthBar, KeyControlAbilities keyQ) {
+
+    public Player2(KeyControl keyH, int healthBar, KeyControlAbilities keyO) {
         this.keyH = keyH;
         this.healthBar = healthBar;
-        this.keyQ = keyQ;
+        this.keyO = keyO;
 
         setDefaultValues();
-        getAttackImage();
         getPlayer2Image();
+        getAttackImageAxe();
     }
 
     public void setDefaultValues() {
@@ -51,16 +51,16 @@ public class Player2 extends Entity{
     }
 
 
-    public void getAttackImage(){
+    public void getAttackImageAxe(){
         try {
-            attackUp1 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_up_1.png"));
-            attackUp2 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_up_2.png"));
-            attackDown1 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_down_1.png"));
-            attackDown2 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_down_2.png"));
-            attackLeft1 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_left_1.png"));
-            attackLeft2 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_left_2.png"));
-            attackRight1 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_right_1.png"));
-            attackRight2 = ImageIO.read(getClass().getResourceAsStream("res/boy_attack_right_2.png"));
+            attackUp1Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_up_1_red.gif"));
+            attackUp2Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_up_2_red.gif"));
+            attackDown1Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_down_1_red.gif"));
+            attackDown2Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_down_2_red.gif"));
+            attackLeft1Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_left_1_red.gif"));
+            attackLeft2Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_left_2_red.gif"));
+            attackRight1Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_right_1_red.png"));
+            attackRight2Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_right_2_red.png"));
 
         }catch (IOException e){
             e.printStackTrace();
@@ -71,7 +71,7 @@ public class Player2 extends Entity{
         //if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
         //if (attacking = true) { //something is wrong here...
 
-        if (keyQ.qPressed) { //Might need to change something here?
+        if (keyO.oPressed) { //Might need to change something here?
             playerAttack();
 
 
@@ -121,56 +121,56 @@ public class Player2 extends Entity{
     public void drawRed(Graphics g) {
 
         BufferedImage imageRed = null;
-        BufferedImage image1 = null;
+        BufferedImage imageRed1 = null;
 
-        //Depending on players direction and attacking stage, a diffrent image is shown.
+        //Depending on players direction and attacking stage, a different image is shown.
         switch(direction) {
             case "up":
-                if (!attacking){
+                if (!keyO.oPressed){
                     if(spriteNum == 1) {imageRed = up1Red;}
                     if(spriteNum == 2) {imageRed = up2Red;}
                 }
-                if (attacking){
-                    if(spriteNum == 1) {image1 = attackUp1;}
-                    if(spriteNum == 2) {image1 = attackUp2;}
+                if (keyO.oPressed){
+                    if(spriteNum == 1) {imageRed1 = attackUp1Red;}
+                    if(spriteNum == 2) {imageRed1 = attackUp2Red;}
                 }
                 break;
             case "down":
-                if (!attacking){
+                if (!keyO.oPressed){
                     if(spriteNum == 1) {imageRed = down1Red;}
                     if(spriteNum == 2) {imageRed = down2Red;}
                 }
-                if (attacking) {
-                    if (spriteNum == 1) {image1 = attackDown1;}
-                    if (spriteNum == 2) {image1 = attackDown2;}
+                if (keyO.oPressed) {
+                    if (spriteNum == 1) {imageRed1 = attackDown1Red;}
+                    if (spriteNum == 2) {imageRed1 = attackDown2Red;}
                 }
                 break;
             case "left":
-                if (!attacking){
+                if (!keyO.oPressed){
                     if(spriteNum == 1) {imageRed = left1Red;}
                     if(spriteNum == 2) {imageRed = left2Red;}
                 }
-                if (attacking){
-                    if(spriteNum == 1) {image1 = attackLeft1;}
-                    if(spriteNum == 2) {image1 = attackLeft2;}
+                if (keyO.oPressed){
+                    if(spriteNum == 1) {imageRed1 = attackLeft1Red;}
+                    if(spriteNum == 2) {imageRed1 = attackLeft2Red;}
                 }
                 break;
             case "right":
-                if (!attacking){
+                if (!keyO.oPressed){
                     if(spriteNum == 1) {imageRed = right1Red;}
                     if(spriteNum == 2) {imageRed = right2Red;}
                 }
-                if (attacking){
-                    if(spriteNum == 1) {image1 = attackRight1;}
-                    if(spriteNum == 2) {image1 = attackRight2;}
+                if (keyO.oPressed){
+                    if(spriteNum == 1) {imageRed1 = attackRight1Red;}
+                    if(spriteNum == 2) {imageRed1 = attackRight2Red;}
                 }
                 break;
         }
         g.drawImage(imageRed, x, y, 48, 48, null);
         health.drawHealth(g,x,y-10,healthBar);
-        g.drawImage(image1,x,y,48,48,null);
+        g.drawImage(imageRed1,x,y,48,48,null);
 
-        if(keyQ.abilityPressed==true) {
+        if(keyO.abilityPressed==true) {
 
             fireball.draw(g, x+ability1x, y+ability1y + 10);
             if(direction.equals("right")){

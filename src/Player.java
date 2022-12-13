@@ -1,5 +1,3 @@
-
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -16,10 +14,12 @@ public class Player extends Entity {
     boolean collisionOn = false;
     CollisionChecker collisionCheck = new CollisionChecker();
     boolean attacking;
+
     KeyControl keyH;
     HealthBar health = new HealthBar();
 
     FireBall fireball = new FireBall();
+
     KeyControlAbilities keyQ;
 
     public Player(KeyControl keyH, int healthBar, KeyControlAbilities keyQ) {
@@ -28,9 +28,8 @@ public class Player extends Entity {
         this.keyQ = keyQ;
 
         setDefaultValues();
-        getAttackImage();
         getPlayerImage();
-
+        getAttackImage();
     }
 
     public void setDefaultValues() {
@@ -58,9 +57,6 @@ public class Player extends Entity {
             e.printStackTrace();
         }
     }
-
-
-
 
     public void getAttackImage(){
         try {
@@ -156,41 +152,41 @@ public class Player extends Entity {
         //Depending on players direction and attacking stage, a diffrent image is shown.
         switch(direction) {
             case "up":
-                if (!attacking){
+                if (!keyQ.qPressed){
                     if(spriteNum == 1) {image = up1;}
                     if(spriteNum == 2) {image = up2;}
                 }
-                if (attacking){
+                if (keyQ.qPressed){
                     if(spriteNum == 1) {image1 = attackUp1;}
                     if(spriteNum == 2) {image1 = attackUp2;}
                 }
                 break;
             case "down":
-                if (!attacking){
+                if (!keyQ.qPressed){
                     if(spriteNum == 1) {image = down1;}
                     if(spriteNum == 2) {image = down2;}
                 }
-                if (attacking) {
+                if (keyQ.qPressed) {
                     if (spriteNum == 1) {image1 = attackDown1;}
                     if (spriteNum == 2) {image1 = attackDown2;}
                 }
                 break;
             case "left":
-                if (!attacking){
+                if (!keyQ.qPressed){
                     if(spriteNum == 1) {image = left1;}
                     if(spriteNum == 2) {image = left2;}
                 }
-                if (attacking){
+                if (keyQ.qPressed){
                     if(spriteNum == 1) {image1 = attackLeft1;}
                     if(spriteNum == 2) {image1 = attackLeft2;}
                 }
                 break;
             case "right":
-                if (!attacking){
+                if (!keyQ.qPressed){
                     if(spriteNum == 1) {image = right1;}
                     if(spriteNum == 2) {image = right2;}
                 }
-                if (attacking){
+                if (keyQ.qPressed){
                     if(spriteNum == 1) {image1 = attackRight1;}
                     if(spriteNum == 2) {image1 = attackRight2;}
                 }

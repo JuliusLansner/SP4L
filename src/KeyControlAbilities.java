@@ -3,16 +3,20 @@ import java.awt.event.KeyListener;
 
 public class KeyControlAbilities implements KeyListener {
 char abilityKey;
+
     public KeyControlAbilities(char abilityKey){
         this.abilityKey = abilityKey;
 
     }
-    public boolean qPressed,abilityPressed;
+
+
+
+    public boolean qPressed,abilityPressed, oPressed;
 
 
     @Override
     public void keyTyped(KeyEvent e) {
-        //Not used. Needed for "KeyListener"
+        //Not used. Needed for "KeyListener".
     }
 
     @Override
@@ -25,6 +29,10 @@ char abilityKey;
         if(keyTouched == abilityKey){
             abilityPressed = true;
         }
+        if (keyTouched == KeyEvent.VK_O){
+            oPressed = true;
+        }
+
 
     }
 
@@ -34,5 +42,8 @@ char abilityKey;
         if(keyTouched == KeyEvent.VK_Q){
            qPressed = false;
     }
+        if ((keyTouched == KeyEvent.VK_O)){
+            oPressed = false;
+        }
 }
 }

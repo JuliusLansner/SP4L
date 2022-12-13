@@ -22,10 +22,10 @@ public class FireBall implements Abilities {
 
                 g.drawImage(pics[rn.nextInt(3)],x,y,100,100,null);
 
-
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
+
 }
