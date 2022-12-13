@@ -13,7 +13,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
     KeyControlAbilities player2AB = new KeyControlAbilities('Q');
     int player1H = 40;
     Player player1 = new Player(keys,player1H,player1AB);
-    Player player2 = new Player(keys2,player1H,player2AB);
+    Player2 player2 = new Player2(keys2,player1H,player2AB);
 
 
 
@@ -92,8 +92,7 @@ player2.update();
             map.drawMap(g);
             updatePosition();
             player1.draw(g);
-            player2.draw(g);
-
+            player2.drawRed(g);
 
 
         } catch (IOException e) {
