@@ -6,6 +6,7 @@ import java.io.IOException;
 public class ScreenDisplay extends JPanel implements Runnable {
     JFrame screen;
     FireBall fireball = new FireBall();
+    CollisionChecker collisionCheck = new CollisionChecker();
     Thread gameThread;
     KeyControl keys = new KeyControl('W','S','A','D');
     KeyControl keys2 = new KeyControl('I','K','J','L');

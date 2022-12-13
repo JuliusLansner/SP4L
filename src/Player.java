@@ -12,6 +12,7 @@ import java.io.IOException;
 public class Player extends Entity {
     int ability1 = x;
     int healthBar;
+    CollisionChecker collisionCheck = new CollisionChecker();
     boolean attacking;
     KeyControl keyH;
     HealthBar health = new HealthBar();
@@ -79,6 +80,9 @@ public class Player extends Entity {
         //ANIMATION WHILE STANDING STILL
         //if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
         //if (attacking = true) { //something is wrong here...
+        if(collisionCheck.collisionCheck(x,y,48,48,366,75,48,6*6)==true){
+            System.out.println("hey");
+        }
 
         if (keyQ.qPressed) { //Might need to change something here?
             playerAttack();

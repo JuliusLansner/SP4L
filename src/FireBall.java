@@ -7,7 +7,6 @@ import java.util.Random;
 public class FireBall implements Abilities {
 
 
-public final int speed = 4;
 
 
 

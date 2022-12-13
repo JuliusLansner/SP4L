@@ -24,7 +24,7 @@ public class MapMaker {
 
     public void drawMap(Graphics g) throws IOException {
         loadMapTiles();
-
+        
         g.drawImage(loadMapTiles()[0],0,0,48*20,48*16,null);
         g.drawImage(loadMapTiles()[2],150,150,6*6,6*6,null);
         g.drawImage(loadMapTiles()[3],150,650,6*6,6*6,null);
