@@ -12,6 +12,8 @@ import java.io.IOException;
 public class Player extends Entity {
     int ability1 = x;
     int healthBar;
+
+    boolean collisionOn = false;
     CollisionChecker collisionCheck = new CollisionChecker();
     boolean attacking;
     KeyControl keyH;
@@ -80,8 +82,23 @@ public class Player extends Entity {
         //ANIMATION WHILE STANDING STILL
         //if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
         //if (attacking = true) { //something is wrong here...
-        if(collisionCheck.collisionCheck(x,y,48,48,366,75,48,6*6)==true){
+        if(collisionCheck.collisionCheck(x,y,48,48,366,75,30,25)==true){
             System.out.println("hey");
+            switch (direction){
+                case"up":
+                    y+=4;
+                    break;
+                case "down":
+                    y-=4;
+                    break;
+                case"left":
+                    x+=4;
+                    break;
+                case"right":
+                    x-=4;
+                    break;
+
+            }
         }
 
         if (keyQ.qPressed) { //Might need to change something here?
@@ -185,9 +202,10 @@ public class Player extends Entity {
 
         if(keyQ.abilityPressed==true) {
 
-                fireball.draw(g, x+ability1x, y+ability1y + 10);
+                fireball.draw(g, ability1x=x, ability1y=y + 10);
+
                 if(direction.equals("right")){
-                    ability1x+=4;
+
                 }
                 if(direction.equals("left")){
                     ability1x--;

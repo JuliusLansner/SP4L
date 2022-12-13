@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8ddc4385-61f7-42c1-8d78-e09f8497b620" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FireBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FireBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MapMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ScreenDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +41,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/malde/intelliJ/SP4L"
+    "last_opened_file_path": "C:/Users/malde/intelliJ/SystemNanotime"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,7 +77,7 @@
       <updated>1670866437088</updated>
       <workItem from="1670866443397" duration="298000" />
       <workItem from="1670882989283" duration="7683000" />
-      <workItem from="1670944527470" duration="1854000" />
+      <workItem from="1670944527470" duration="6580000" />
     </task>
     <servers />
   </component>

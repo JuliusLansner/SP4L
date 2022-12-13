@@ -26,9 +26,8 @@ public class ScreenDisplay extends JPanel implements Runnable {
     int screenRow = 16;
     int screenWidth = tileSize * screenCol;
     int screenHeight = tileSize * screenRow;
-    int fps = 60;
-    int rectPositionx = 100;
-    int rectPositiony = 100;
+    int fps = 80;
+
 
 
     private JPanel display(){
