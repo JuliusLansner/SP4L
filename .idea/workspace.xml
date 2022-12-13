@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ddc4385-61f7-42c1-8d78-e09f8497b620" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Player2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_down_1_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_down_2_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_left_1_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_left_2_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_right_1_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_right_2_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_up_1 _red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_up_2_red.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/Wall.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/testFlame.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tiles/testRock.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScreenDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapMaker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +43,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/mikkel/Documents/GitHub/SP4L/src/res"
+    "last_opened_file_path": "/Users/mikkel/Documents/GitHub/SP4L/src/tiles"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/tiles" />
       <recent name="$PROJECT_DIR$/src/res" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
