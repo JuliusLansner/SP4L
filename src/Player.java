@@ -11,7 +11,6 @@ public class Player extends Entity {
     int ability1 = x;
     int healthBar;
 
-    boolean collisionOn = false;
     CollisionChecker collisionCheck = new CollisionChecker();
     boolean attacking;
 
@@ -40,6 +39,105 @@ public class Player extends Entity {
         direction = "down";
         ability1x = 0;
         ability1y = 0;
+    }
+
+    public void collisionMapboundary(){
+        if(collisionCheck.collisionCheck(x,y,10,35,0,0,20,48*16)==true){ //venstre væg
+            System.out.println("hey");
+            switch (direction){
+                case"up":
+                    y+=4;
+                    break;
+                case "down":
+                    y-=4;
+                    break;
+                case"left":
+                    x+=4;
+                    break;
+                case"right":
+                    x-=4;
+                    break;
+
+            }
+        }
+
+        if(collisionCheck.collisionCheck(x,y,25,35,0,0,48*20,5)==true){ //øverste væg
+            System.out.println("hey");
+            switch (direction){
+                case"up":
+                    y+=4;
+                    break;
+                case "down":
+                    y-=4;
+                    break;
+                case"left":
+                    x+=4;
+                    break;
+                case"right":
+                    x-=4;
+                    break;
+
+            }
+        }
+        if(collisionCheck.collisionCheck(x,y,25,35,920,0,48,48*16)==true){ //højre væg
+            System.out.println("hey");
+            switch (direction){
+                case"up":
+                    y+=4;
+                    break;
+                case "down":
+                    y-=4;
+                    break;
+                case"left":
+                    x+=4;
+                    break;
+                case"right":
+                    x-=4;
+                    break;
+
+            }
+        }
+
+        if(collisionCheck.collisionCheck(x,y,25,35,0,770,48*20,50)==true){ //Sidste vandrette væg
+            System.out.println("hey");
+            switch (direction){
+                case"up":
+                    y+=4;
+                    break;
+                case "down":
+                    y-=4;
+                    break;
+                case"left":
+                    x+=4;
+                    break;
+                case"right":
+                    x-=4;
+                    break;
+
+            }
+        }
+
+    }
+
+    public void collisionObstacles(){
+        if(collisionCheck.collisionCheck(x,y,25,35,366,75,25,20)==true){ // den lille ildkugle
+            System.out.println("hey");
+            switch (direction){
+                case"up":
+                    y+=4;
+                    break;
+                case "down":
+                    y-=4;
+                    break;
+                case"left":
+                    x+=4;
+                    break;
+                case"right":
+                    x-=4;
+                    break;
+
+            }
+        }
     }
 
     public void getPlayerImage() {
@@ -78,24 +176,12 @@ public class Player extends Entity {
         //ANIMATION WHILE STANDING STILL
         //if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
         //if (attacking = true) { //something is wrong here...
-        if(collisionCheck.collisionCheck(x,y,48,48,366,75,30,25)==true){
-            System.out.println("hey");
-            switch (direction){
-                case"up":
-                    y+=4;
-                    break;
-                case "down":
-                    y-=4;
-                    break;
-                case"left":
-                    x+=4;
-                    break;
-                case"right":
-                    x-=4;
-                    break;
 
-            }
-        }
+        //Map collision
+        collisionObstacles();
+        collisionMapboundary();
+
+
 
         if (keyQ.qPressed) { //Might need to change something here?
             playerAttack();
