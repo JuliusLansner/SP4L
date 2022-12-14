@@ -8,7 +8,8 @@ import java.io.IOException;
 //IN GamePanel, remove code in 'update', REPLACE WITH player.update();
 //REMOVE CODE IN 'draw', REPLACE WITH.
 public class Player extends Entity {
-    int ability1 = x;
+    public int attackX;
+    public int attackY;
 
     CollisionChecker collisionCheck = new CollisionChecker();
     boolean attacking;
@@ -41,6 +42,8 @@ public class Player extends Entity {
         direction = "down";
         ability1x = 0;
         ability1y = 0;
+        attackY = 0;
+        attackX = 0;
     }
 
 
@@ -293,8 +296,8 @@ public class Player extends Entity {
         if(keyQ.abilityPressed==true) {
             fireball = new FireBall();
             fireball.setDirection(direction);
-            fireball.setxPos(x);
-            fireball.setyPos(y + 10);
+            attackX = fireball.setxPos(x);
+            attackY = fireball.setyPos(y + 10);
 
             keyQ.abilityPressed = false;
         }

@@ -7,20 +7,22 @@ import java.util.Random;
 public class FireBall implements Abilities {
 
     private String direction = "";
-    private int xPos = 0;
-    private int yPos = 0;
+    public int xPos = 0;
+    public int yPos = 0;
 
 
     public void setDirection(String direction) {
         this.direction = direction;
     }
 
-    public void setxPos(int xPos) {
+    public int setxPos(int xPos) {
         this.xPos = xPos;
+        return xPos;
     }
 
-    public void setyPos(int yPos) {
+    public int setyPos(int yPos) {
         this.yPos = yPos;
+        return yPos;
     }
 
     public void draw(Graphics g){
