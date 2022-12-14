@@ -40,6 +40,7 @@ public class Player extends Entity {
         ability1y = 0;
     }
 
+
     public void collisionMapboundary(){
         if(collisionCheck.collisionCheck(x,y,10,35,0,0,20,48*16)==true){ //venstre væg
             System.out.println("hey");
@@ -138,6 +139,8 @@ public class Player extends Entity {
             }
         }
     }
+
+
 
     public void getPlayerImage() {
         try {

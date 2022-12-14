@@ -6,7 +6,6 @@ import java.io.IOException;
 public class Player2 extends Entity{
 
     int ability1 = x;
-    int healthBar;
     KeyControl keyH;
     HealthBar healthbar = new HealthBar();
     FireBall fireball = new FireBall();
@@ -167,7 +166,7 @@ public class Player2 extends Entity{
                 break;
         }
         g.drawImage(imageRed, x, y, 48, 48, null);
-        healthbar.drawHealth(g,x,y-10,healthBar);
+        healthbar.drawHealth(g,x,y-10,health);
         g.drawImage(imageRed1,x,y,48,48,null);
 
         if(keyO.abilityPressed==true) {
