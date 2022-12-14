@@ -220,18 +220,17 @@ public class Player extends Entity {
     }
 
     public void playerAttack() {
+        spriteCounterAttack++;
 
-        //spriteCounter++;
-
-        if (spriteCounter <= 5){ //show attack image 1 during first five frames
-            spriteNum = 1;
+        if (spriteCounterAttack >= 15){ //show attack image 1 during first five frames
+            spriteNumAttack = 1;
         }
-        if (spriteCounter > 5 && spriteCounter <= 25){
-            spriteNum = 2;
+        if (spriteCounterAttack > 15 && spriteCounterAttack <= 30){
+            spriteNumAttack = 2;
         }
-        if (spriteCounter > 25){
-            spriteNum = 1;
-            spriteCounter = 0;
+        if (spriteCounterAttack > 30){
+            spriteNumAttack = 1;
+            spriteCounterAttack = 0;
             attacking = false;
         }
     }
@@ -251,8 +250,8 @@ public class Player extends Entity {
                     if(spriteNum == 2) {image = up2;}
                 }
                 if (keyQ.qPressed){
-                    if(spriteNum == 1) {image1 = attackUp1;}
-                    if(spriteNum == 2) {image1 = attackUp2;}
+                    if(spriteNumAttack == 1) {image1 = attackUp1;}
+                    if(spriteNumAttack == 2) {image1 = attackUp2;}
                 }
                 break;
             case "down":
@@ -261,8 +260,8 @@ public class Player extends Entity {
                     if(spriteNum == 2) {image = down2;}
                 }
                 if (keyQ.qPressed) {
-                    if (spriteNum == 1) {image1 = attackDown1;}
-                    if (spriteNum == 2) {image1 = attackDown2;}
+                    if (spriteNumAttack == 1) {image1 = attackDown1;}
+                    if (spriteNumAttack == 2) {image1 = attackDown2;}
                 }
                 break;
             case "left":
@@ -271,8 +270,8 @@ public class Player extends Entity {
                     if(spriteNum == 2) {image = left2;}
                 }
                 if (keyQ.qPressed){
-                    if(spriteNum == 1) {image1 = attackLeft1;}
-                    if(spriteNum == 2) {image1 = attackLeft2;}
+                    if(spriteNumAttack == 1) {image1 = attackLeft1;}
+                    if(spriteNumAttack == 2) {image1 = attackLeft2;}
                 }
                 break;
             case "right":
@@ -281,8 +280,8 @@ public class Player extends Entity {
                     if(spriteNum == 2) {image = right2;}
                 }
                 if (keyQ.qPressed){
-                    if(spriteNum == 1) {image1 = attackRight1;}
-                    if(spriteNum == 2) {image1 = attackRight2;}
+                    if(spriteNumAttack == 1) {image1 = attackRight1;}
+                    if(spriteNumAttack == 2) {image1 = attackRight2;}
                 }
                 break;
         }

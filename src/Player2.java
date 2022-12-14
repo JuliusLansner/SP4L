@@ -101,18 +101,17 @@ public class Player2 extends Entity{
     }
 
     public void playerAttack() {
+        spriteCounterAttack++;
 
-        spriteCounter++;
-
-        if (spriteCounter <= 5){ //show attack image 1 during first five frames
-            spriteNum = 1;
+        if (spriteCounterAttack >= 15){ //show attack image 1 during first fifteen frames
+            spriteNumAttack = 1;
         }
-        if (spriteCounter > 5 && spriteCounter <= 25){
-            spriteNum = 2;
+        if (spriteCounterAttack > 15 && spriteCounterAttack <= 30){
+            spriteNumAttack = 2;
         }
-        if (spriteCounter > 25){
-            spriteNum = 1;
-            spriteCounter = 0;
+        if (spriteCounterAttack > 30){
+            spriteNumAttack = 1;
+            spriteCounterAttack = 0;
             attacking = false;
         }
     }
@@ -132,8 +131,8 @@ public class Player2 extends Entity{
                     if(spriteNum == 2) {imageRed = up2Red;}
                 }
                 if (keyO.oPressed){
-                    if(spriteNum == 1) {imageRed1 = attackUp1Red;}
-                    if(spriteNum == 2) {imageRed1 = attackUp2Red;}
+                    if(spriteNumAttack == 1) {imageRed1 = attackUp1Red;}
+                    if(spriteNumAttack == 2) {imageRed1 = attackUp2Red;}
                 }
                 break;
             case "down":
@@ -142,8 +141,8 @@ public class Player2 extends Entity{
                     if(spriteNum == 2) {imageRed = down2Red;}
                 }
                 if (keyO.oPressed) {
-                    if (spriteNum == 1) {imageRed1 = attackDown1Red;}
-                    if (spriteNum == 2) {imageRed1 = attackDown2Red;}
+                    if (spriteNumAttack == 1) {imageRed1 = attackDown1Red;}
+                    if (spriteNumAttack == 2) {imageRed1 = attackDown2Red;}
                 }
                 break;
             case "left":
@@ -152,8 +151,8 @@ public class Player2 extends Entity{
                     if(spriteNum == 2) {imageRed = left2Red;}
                 }
                 if (keyO.oPressed){
-                    if(spriteNum == 1) {imageRed1 = attackLeft1Red;}
-                    if(spriteNum == 2) {imageRed1 = attackLeft2Red;}
+                    if(spriteNumAttack == 1) {imageRed1 = attackLeft1Red;}
+                    if(spriteNumAttack == 2) {imageRed1 = attackLeft2Red;}
                 }
                 break;
             case "right":
@@ -162,8 +161,8 @@ public class Player2 extends Entity{
                     if(spriteNum == 2) {imageRed = right2Red;}
                 }
                 if (keyO.oPressed){
-                    if(spriteNum == 1) {imageRed1 = attackRight1Red;}
-                    if(spriteNum == 2) {imageRed1 = attackRight2Red;}
+                    if(spriteNumAttack == 1) {imageRed1 = attackRight1Red;}
+                    if(spriteNumAttack == 2) {imageRed1 = attackRight2Red;}
                 }
                 break;
         }
