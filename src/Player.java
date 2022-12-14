@@ -9,21 +9,19 @@ import java.io.IOException;
 //REMOVE CODE IN 'draw', REPLACE WITH.
 public class Player extends Entity {
     int ability1 = x;
-    int healthBar;
 
     CollisionChecker collisionCheck = new CollisionChecker();
     boolean attacking;
 
     KeyControl keyH;
-    HealthBar health = new HealthBar();
+    HealthBar healthbar = new HealthBar();
 
     FireBall fireball = new FireBall();
 
     KeyControlAbilities keyQ;
 
-    public Player(KeyControl keyH, int healthBar, KeyControlAbilities keyQ) {
+    public Player(KeyControl keyH, KeyControlAbilities keyQ) {
         this.keyH = keyH;
-        this.healthBar = healthBar;
         this.keyQ = keyQ;
 
         setDefaultValues();
@@ -36,6 +34,7 @@ public class Player extends Entity {
         x = 100;
         y = 100;
         speed = 4;
+        health = 40;
         direction = "down";
         ability1x = 0;
         ability1y = 0;
@@ -279,7 +278,7 @@ public class Player extends Entity {
                 break;
         }
         g.drawImage(image, x, y, 48, 48, null);
-        health.drawHealth(g,x,y-10,healthBar);
+        healthbar.drawHealth(g,x,y-10,health);
         g.drawImage(image1,x,y,48,48,null);
 
         if(keyQ.abilityPressed==true) {

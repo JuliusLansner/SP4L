@@ -9,7 +9,7 @@ public class Entity {
     public int ability1x;
     public int ability1y;
     public int speed;
-    public int abilitSspeed;
+    public int health;
     public boolean attacking = false;
 
     public BufferedImage up1, up2, down1, down2, left1, left2, right1, right2;
