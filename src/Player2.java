@@ -5,7 +5,6 @@ import java.io.IOException;
 
 public class Player2 extends Entity{
 
-    int ability1 = x;
     KeyControl keyH;
     HealthBar healthbar = new HealthBar();
     FireBall fireball;

@@ -10,6 +10,9 @@ import java.io.IOException;
 public class Player extends Entity {
     public int attackX;
     public int attackY;
+    public int fireX;
+    public int fireY;
+
 
     CollisionChecker collisionCheck = new CollisionChecker();
     boolean attacking;
@@ -35,89 +38,91 @@ public class Player extends Entity {
 
     public void setDefaultValues() {
         //PERHAPS USE 'WIDTH/2' AND 'HEIGHT/2' TO SPAWN IN MIDDLE NO MATTER THE RESOLUTION
-        x = 100;
-        y = 100;
+        x1 = 100;
+        y1 = 100;
         speed = 4;
-        health = 40;
+        health2 = 40;
         direction = "down";
         ability1x = 0;
         ability1y = 0;
         attackY = 0;
         attackX = 0;
+        fireX = 0;
+        fireY = 0;
     }
 
 
     public void collisionMapboundary(){
-        if(collisionCheck.collisionCheck(x,y,10,35,0,0,20,48*16)==true){ //venstre væg
+        if(collisionCheck.collisionCheck(x1,y1,10,35,0,0,20,48*16)==true){ //venstre væg
             System.out.println("hey");
             switch (direction){
                 case"up":
-                    y+=4;
+                    y1+=4;
                     break;
                 case "down":
-                    y-=4;
+                    y1-=4;
                     break;
                 case"left":
-                    x+=4;
+                    x1+=4;
                     break;
                 case"right":
-                    x-=4;
+                    x1-=4;
                     break;
 
             }
         }
 
-        if(collisionCheck.collisionCheck(x,y,25,35,0,0,48*20,5)==true){ //øverste væg
+        if(collisionCheck.collisionCheck(x1,y1,25,35,0,0,48*20,5)==true){ //øverste væg
             System.out.println("hey");
             switch (direction){
                 case"up":
-                    y+=4;
+                    y1+=4;
                     break;
                 case "down":
-                    y-=4;
+                    y1-=4;
                     break;
                 case"left":
-                    x+=4;
+                    x1+=4;
                     break;
                 case"right":
-                    x-=4;
+                    x1-=4;
                     break;
 
             }
         }
-        if(collisionCheck.collisionCheck(x,y,25,35,920,0,48,48*16)==true){ //højre væg
+        if(collisionCheck.collisionCheck(x1,y1,25,35,920,0,48,48*16)==true){ //højre væg
             System.out.println("hey");
             switch (direction){
                 case"up":
-                    y+=4;
+                    y1+=4;
                     break;
                 case "down":
-                    y-=4;
+                    y1-=4;
                     break;
                 case"left":
-                    x+=4;
+                    x1+=4;
                     break;
                 case"right":
-                    x-=4;
+                    x1-=4;
                     break;
 
             }
         }
 
-        if(collisionCheck.collisionCheck(x,y,25,35,0,770,48*20,50)==true){ //Sidste vandrette væg
+        if(collisionCheck.collisionCheck(x1,y1,25,35,0,770,48*20,50)==true){ //Sidste vandrette væg
             System.out.println("hey");
             switch (direction){
                 case"up":
-                    y+=4;
+                    y1+=4;
                     break;
                 case "down":
-                    y-=4;
+                    y1-=4;
                     break;
                 case"left":
-                    x+=4;
+                    x1+=4;
                     break;
                 case"right":
-                    x-=4;
+                    x1-=4;
                     break;
 
             }
@@ -126,20 +131,20 @@ public class Player extends Entity {
     }
 
     public void collisionObstacles(){
-        if(collisionCheck.collisionCheck(x,y,25,35,366,75,25,20)==true){ // den lille ildkugle
+        if(collisionCheck.collisionCheck(x1,y1,25,35,366,75,25,20)==true){ // den lille ildkugle
             System.out.println("hey");
             switch (direction){
                 case"up":
-                    y+=4;
+                    y1+=4;
                     break;
                 case "down":
-                    y-=4;
+                    y1-=4;
                     break;
                 case"left":
-                    x+=4;
+                    x1+=4;
                     break;
                 case"right":
-                    x-=4;
+                    x1-=4;
                     break;
 
             }
@@ -197,16 +202,16 @@ public class Player extends Entity {
 
         }else if (keyH.upPressed == true) {
             direction = "up";
-            y -= speed;
+            y1 -= speed;
         } else if (keyH.downPressed == true) {
             direction = "down";
-            y += speed;
+            y1 += speed;
         } else if (keyH.leftPressed == true) {
             direction = "left";
-            x -= speed;
+            x1 -= speed;
         } else if (keyH.rightPressed == true) {
             direction = "right";
-            x += speed;
+            x1 += speed;
         }
         spriteCounter++;
         if (spriteCounter > 15) {
@@ -285,9 +290,9 @@ public class Player extends Entity {
                 }
                 break;
         }
-        g.drawImage(image, x, y, 48, 48, null);
-        healthbar.drawHealth(g,x,y-10,health);
-        g.drawImage(image1,x,y,48,48,null);
+        g.drawImage(image, x1, y1, 48, 48, null);
+        healthbar.drawHealth(g,x1,y1-10,health2);
+        g.drawImage(image1,x1,y1,48,48,null);
 
 
 
@@ -295,13 +300,14 @@ public class Player extends Entity {
         if(keyQ.abilityPressed==true) {
             fireball = new FireBall();
             fireball.setDirection(direction);
-            attackX = fireball.setxPos(x);
-            attackY = fireball.setyPos(y + 10);
+            attackX = fireball.setxPos(x1);
+            attackY = fireball.setyPos(y1 + 10);
 
             keyQ.abilityPressed = false;
         }
 
         if (fireball != null){
+            fireball.draw(g);
             if(fireball.direction.equals("right")){
                 fireball.xPos += 4;
             }
@@ -314,7 +320,6 @@ public class Player extends Entity {
             if(fireball.direction.equals("up")){
                 fireball.yPos -= 4;
             }
-            fireball.draw(g);
         }
 
 
