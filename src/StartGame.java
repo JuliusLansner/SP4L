@@ -15,6 +15,9 @@ private static JLabel Blabel;
 private static JTextField AuserText = new JTextField(20);
 private static JTextField BuserText = new JTextField(20);
 private static JButton Continue = new JButton("Continue");
+
+  ScreenDisplay screen = new ScreenDisplay();
+
     void aStartGame()  {
       frame.setSize(300,250);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,11 +50,17 @@ private static JButton Continue = new JButton("Continue");
       //TODO -- if usernames already used, contiue as normal, if NOT - add to DB.
       //TODO -- ADD Score to DB.
       // none of this is super important but fun to do ._.
-   dbinsert();
+   //dbinsert();
     String userA = AuserText.getText();
-    String userB= BuserText.getText();
+    String userB = BuserText.getText();
     //TODO -- Go to GAME AFTER THIS
 
+    frame.setVisible(false);
+    frame.dispose();
+
+    
+    screen.screen();
+    screen.runGameThread();
 
 
 

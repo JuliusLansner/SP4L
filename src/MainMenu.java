@@ -73,6 +73,8 @@ public class MainMenu implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         StartGame start = new StartGame();
         start.aStartGame();
+        frame.setVisible(false);
+        frame.dispose();
     }
 }
 

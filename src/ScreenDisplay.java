@@ -30,7 +30,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
     int rectPositiony = 100;
 
 
-    private JPanel display(){
+    public JPanel display(){
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
@@ -47,7 +47,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
 
     public void screen(){
         screen = new JFrame();
-        screen.add(display());
+        //screen.add(display());
         screen.setVisible(true);
         screen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//closes the program when the window is closed
         screen.pack();// Does so the screen size adjust to the JPanels size
@@ -57,6 +57,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
     public void runGameThread(){//Starts the thread which makes the run method start.
         gameThread = new Thread(this);
         gameThread.run();
+
     }
 
     @Override

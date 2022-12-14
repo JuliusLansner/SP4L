@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        ScreenDisplay screen = new ScreenDisplay();
-        screen.screen();
-        screen.runGameThread();
+        MainMenu mainmenu = new MainMenu();
+       //ScreenDisplay screen = new ScreenDisplay();
+        //screen.runGameThread();
+
     }
 }
