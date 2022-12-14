@@ -171,7 +171,7 @@ public class Player2 extends Entity{
 
         if(keyO.abilityPressed==true) {
 
-            fireball.draw(g, x+ability1x, y+ability1y + 10);
+            fireball.draw(g, ability1x+x, ability1y+y + 10);
             if(direction.equals("right")){
                 ability1x+=4;
             }

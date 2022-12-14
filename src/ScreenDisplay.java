@@ -82,7 +82,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
 
     public void collisionAttacksPlayer1(){
         if(player1.keyQ.abilityPressed) {
-            if (collisionCheck.collisionCheck(player1.ability1x + player1.x, player1.ability1y + player1.y, 20, 20, player2.x, player2.y, 20, 48) == true) {
+            if (collisionCheck.collisionCheck(player1.ability1x + player1.x, player1.ability1y + player1.y, 35, 20, player2.x, player2.y, 48, 48) == true) {
                 player2.health -= 1;
             }
         }
@@ -90,7 +90,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
 
     public void collisionAttacksPlayer2(){
         if(player2.keyO.abilityPressed) {
-            if (collisionCheck.collisionCheck(player2.ability1x + player2.x, player2.ability1y + player2.y, 20, 20, player1.x, player1.y, 20, 48) == true) {
+            if (collisionCheck.collisionCheck(player2.ability1x + player2.x, player2.ability1y + player2.y, 35, 20, player1.x, player1.y, 48, 48) == true) {
                 player1.health -= 1;
             }
         }

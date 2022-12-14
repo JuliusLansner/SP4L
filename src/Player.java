@@ -289,7 +289,7 @@ public class Player extends Entity {
                 fireball.draw(g, ability1x+x, ability1y+y + 10);
 
                 if(direction.equals("right")){
-                    ability1x++;
+                    ability1x+=4;
                 }
                 if(direction.equals("left")){
                     ability1x--;

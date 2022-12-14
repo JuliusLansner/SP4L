@@ -4,6 +4,7 @@
     <list default="true" id="8ddc4385-61f7-42c1-8d78-e09f8497b620" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ScreenDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,7 @@
       <workItem from="1670866443397" duration="298000" />
       <workItem from="1670882989283" duration="7683000" />
       <workItem from="1670944527470" duration="9964000" />
-      <workItem from="1671004998709" duration="2730000" />
+      <workItem from="1671004998709" duration="3500000" />
     </task>
     <servers />
   </component>
