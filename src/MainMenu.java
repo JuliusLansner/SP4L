@@ -8,7 +8,7 @@ public class MainMenu implements ActionListener{
 
     JFrame frame = new JFrame();
     JPanel title_panel = new JPanel();
-    JPanel panel = new JPanel();
+    //JPanel panel = new JPanel();
     JLabel textfield = new JLabel();
 
 
@@ -16,16 +16,16 @@ public class MainMenu implements ActionListener{
     JButton leaderboard = new JButton("Leaderboards");
 
 
-    MainMenu() {
+    void aMainMenu() {
 
 
 
-        panel.setBorder(BorderFactory.createEmptyBorder(250,250,250,250));
-        panel.setLayout(new GridLayout(0,1));
-        panel.add(startGame);
-        panel.setBorder(BorderFactory.createEmptyBorder(250,250,250,250));
-        panel.setLayout(new GridLayout(0,1));
-        panel.add(leaderboard);
+        //panel.setBorder(BorderFactory.createEmptyBorder(250,250,250,250));
+        //panel.setLayout(new GridLayout(0,1));
+        //panel.add(startGame);
+        //panel.setBorder(BorderFactory.createEmptyBorder(250,250,250,250));
+        //panel.setLayout(new GridLayout(0,1));
+        //panel.add(leaderboard);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1280, 720);
@@ -58,8 +58,8 @@ public class MainMenu implements ActionListener{
         //adding the text to the titel panel, making text align with where we want it according to the title panel
         title_panel.add(textfield);
         frame.add(title_panel,BorderLayout.NORTH);
-        frame.add(panel,BorderLayout.CENTER);
-        frame.add(panel,BorderLayout.CENTER);
+        //frame.add(panel,BorderLayout.CENTER);
+        //frame.add(panel,BorderLayout.CENTER);
 
         //panel.add(startGame);
         //frame.add(button_panel2);
@@ -71,8 +71,8 @@ public class MainMenu implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        StartGame start = new StartGame();
-        start.aStartGame();
+        StartGame startgame = new StartGame();
+       // startgame.aStartGame();
         frame.setVisible(false);
         frame.dispose();
     }

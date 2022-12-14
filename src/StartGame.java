@@ -8,21 +8,25 @@ import java.sql.SQLException;
 
 public class StartGame implements ActionListener {
   String sql = "INSERT INTO users (users)" + "VALUES(?)";
-private static JFrame frame = new JFrame();
+
 private static JPanel panel = new JPanel();
 private static JLabel Alabel;
 private static JLabel Blabel;
 private static JTextField AuserText = new JTextField(20);
 private static JTextField BuserText = new JTextField(20);
 private static JButton Continue = new JButton("Continue");
+MainMenu screen = new MainMenu();
 
-  ScreenDisplay screen = new ScreenDisplay();
+ ScreenDisplay sd = new ScreenDisplay();
 
-    void aStartGame()  {
-      frame.setSize(300,250);
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      frame.setVisible(true);
-      frame.add(panel);
+  int pointsuserA;
+  int pointsuserB;
+
+    StartGame()  {
+      sd.sd1.setSize(300,250);
+      sd.sd1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      sd.sd1.setVisible(true);
+      sd.sd1.add(panel);
 
       panel.setLayout(null);
       Alabel = new JLabel("User A:");
@@ -38,9 +42,10 @@ private static JButton Continue = new JButton("Continue");
       panel.add(BuserText);
 
       Continue.setBounds(10,80,100,25);
-      Continue.addActionListener(new StartGame());
+      Continue.addActionListener(this);
       panel.add(Continue);
-
+      String userA = AuserText.getText();
+       String userB = BuserText.getText();
 
     }
 
@@ -54,15 +59,36 @@ private static JButton Continue = new JButton("Continue");
     String userA = AuserText.getText();
     String userB = BuserText.getText();
     //TODO -- Go to GAME AFTER THIS
-
-    frame.setVisible(false);
-    frame.dispose();
-
-    
-    screen.screen();
-    screen.runGameThread();
+    System.out.println("players: "+ userA + " and " + userB+" are playing against eachother");
+    System.out.println("both start at 0 points");
 
 
+    sd.sd1.setVisible(false);
+    sd.sd1.dispose();
+    //ScreenDisplay screen = new ScreenDisplay();
+    //screen.screen();
+    //screen.runGameThread();
+
+  }
+  public void points(){
+    String userA = AuserText.getText();
+    String userB = BuserText.getText();
+
+    System.out.println(userA+" "+pointsuserA);
+    System.out.println(userB+" "+pointsuserB);
+    pointsuserA = 0;
+    pointsuserB = 0;
+    //psuedokode
+    if(playerAhealth = 0){
+      pointsuserB =+1;
+      System.out.println(userA+" "+pointsuserA);
+      System.out.println(userB+" "+pointsuserB);
+    }
+    if(playerBhealth=0){
+      pointsuserA =+1;
+      System.out.println(userA+" "+pointsuserA);
+      System.out.println(userB+" "+pointsuserB);
+    }
 
 
   }

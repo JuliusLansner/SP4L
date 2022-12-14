@@ -4,7 +4,7 @@ import java.awt.event.KeyListener;
 import java.io.IOException;
 
 public class ScreenDisplay extends JPanel implements Runnable {
-    JFrame screen;
+
     FireBall fireball = new FireBall();
     Thread gameThread;
     KeyControl keys = new KeyControl('W','S','A','D');
@@ -14,7 +14,9 @@ public class ScreenDisplay extends JPanel implements Runnable {
     int player1H = 40;
     Player player1 = new Player(keys,player1H,player1AB);
     Player player2 = new Player(keys2,player1H,player2AB);
+    MainMenu screen = new MainMenu();
 
+    JFrame sd1 = new JFrame();
 
 
     MapMaker map = new MapMaker();
@@ -30,7 +32,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
     int rectPositiony = 100;
 
 
-    public JPanel display(){
+   private JPanel display(){
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
@@ -46,11 +48,11 @@ public class ScreenDisplay extends JPanel implements Runnable {
     }
 
     public void screen(){
-        screen = new JFrame();
-        //screen.add(display());
-        screen.setVisible(true);
-        screen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//closes the program when the window is closed
-        screen.pack();// Does so the screen size adjust to the JPanels size
+
+        sd1.add(display());
+        sd1.setVisible(true);
+        sd1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//closes the program when the window is closed
+        sd1.pack();// Does so the screen size adjust to the JPanels size
 
     }
 
@@ -59,6 +61,12 @@ public class ScreenDisplay extends JPanel implements Runnable {
         gameThread.run();
 
     }
+    void play(){
+        StartGame start = new StartGame();
+        screen();
+        runGameThread();
+    }
+
 
     @Override
     public void run() {
@@ -82,8 +90,8 @@ public class ScreenDisplay extends JPanel implements Runnable {
     }
 
     public void updatePosition(){
-player1.update();
-player2.update();
+    player1.update();
+    player2.update();
 
     }
     public void paint(Graphics g){
@@ -105,5 +113,6 @@ player2.update();
         g.dispose();
 
     }
+
 
 }
