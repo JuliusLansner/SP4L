@@ -4,21 +4,15 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
 
-public class FireBall implements Abilities {
+public class FireBall{
 
     private String direction = "";
     public int xPos;
     public int yPos;
 
     public FireBall(){
-        values();
     }
 
-    public void values(){
-        update();
-        xPos = 0;
-        yPos = 0;
-    }
 
 
     public void setDirection(String direction) {
