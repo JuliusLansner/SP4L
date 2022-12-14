@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Random;
 
 public class FireBall{
-
+private boolean fireHit = false;
     public String direction = "";
     public int xPos;
     public int yPos;
@@ -42,14 +42,17 @@ public class FireBall{
             pics[1] = ImageIO.read(getClass().getResourceAsStream("/res/Fireball2.gif"));
             pics[2] = ImageIO.read(getClass().getResourceAsStream("/res/Fireball3.gif"));
 
-                g.drawImage(pics[rn.nextInt(3)],this.xPos,this.yPos,100,100,null);
+            g.drawImage(pics[rn.nextInt(3)], this.xPos, this.yPos, 100, 100, null);
 
                 CollisionChecker collisionChecker = new CollisionChecker();
-                if(collisionChecker.collisionCheck(this.xPos,this.yPos,100,100,Entity.x,Entity.y,48,48)==true){
+                if(collisionChecker.collisionCheck(this.xPos,this.yPos,80,80,Entity.x,Entity.y,48,48)==true){
                     Player.health-=1;
+
+
                 }
-                if(collisionChecker.collisionCheck(this.xPos,this.yPos,100,100,Entity.x1,Entity.y1,48,48)==true){
+                if(collisionChecker.collisionCheck(this.xPos,this.yPos,80,80,Entity.x1,Entity.y1,48,48)==true){
                 Player2.health2-=1;
+
                 }
 
         } catch (IOException e) {

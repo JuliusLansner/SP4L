@@ -8,6 +8,7 @@ import java.io.IOException;
 //IN GamePanel, remove code in 'update', REPLACE WITH player.update();
 //REMOVE CODE IN 'draw', REPLACE WITH.
 public class Player extends Entity {
+    FireBall fireball;
     public int attackX;
     public int attackY;
     public int fireX;
@@ -19,7 +20,6 @@ public class Player extends Entity {
 
     KeyControl keyH;
     HealthBar healthbar = new HealthBar();
-    FireBall fireball;
 
 
 
