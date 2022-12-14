@@ -182,16 +182,16 @@ public class Player2 extends Entity{
         if (fireball != null){
             fireball.draw(g);
             if(fireball.direction.equals("right")){
-                fireball.xPos += 10;
+                fireball.xPos += 30;
             }
             if(fireball.direction.equals("left")){
-                fireball.xPos -= 10;
+                fireball.xPos -= 30;
             }
             if(fireball.direction.equals("down")){
-                fireball.yPos += 10;
+                fireball.yPos += 30;
             }
             if(fireball.direction.equals("up")){
-                fireball.yPos -= 10;
+                fireball.yPos -= 30;
             }
         }
 

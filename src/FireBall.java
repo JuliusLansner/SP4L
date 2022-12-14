@@ -64,16 +64,16 @@ private boolean fireHit = false;
     private void update()
     {
         if(this.direction.equals("right")){
-            this.xPos += 4;
+            this.xPos += 30;
         }
         if(this.direction.equals("left")){
-            this.xPos -= 4;
+            this.xPos -= 30;
         }
         if(this.direction.equals("down")){
-            this.yPos += 4;
+            this.yPos += 30;
         }
         if(this.direction.equals("up")){
-            this.yPos -= 4;
+            this.yPos -= 30;
         }
     }
 }
