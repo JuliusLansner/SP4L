@@ -50,7 +50,7 @@ private boolean fireHit = false;
 
 
                 }
-                if(collisionChecker.collisionCheck(this.xPos,this.yPos,80,80,Entity.x1,Entity.y1,48,48)==true){
+                if(collisionChecker.collisionCheck(this.xPos,this.yPos,80,80,Entity.x1,Entity.y1,30,30)==true){
                 Player2.health2-=1;
 
                 }

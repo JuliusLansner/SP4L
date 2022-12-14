@@ -173,13 +173,27 @@ public class Player2 extends Entity{
         if(keyO.abilityPressed==true) {
             fireball = new FireBall();
             fireball.setDirection(direction);
-            fireball.setxPos(x);
-            fireball.setyPos(y + 10);
+            fireball.setxPos(x+30);
+            fireball.setyPos(y + 30);
 
             keyO.abilityPressed = false;
         }
 
-        if (fireball != null) fireball.draw(g);
+        if (fireball != null){
+            fireball.draw(g);
+            if(fireball.direction.equals("right")){
+                fireball.xPos += 10;
+            }
+            if(fireball.direction.equals("left")){
+                fireball.xPos -= 10;
+            }
+            if(fireball.direction.equals("down")){
+                fireball.yPos += 10;
+            }
+            if(fireball.direction.equals("up")){
+                fireball.yPos -= 10;
+            }
+        }
 
 
 

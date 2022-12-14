@@ -300,8 +300,8 @@ public class Player extends Entity {
         if(keyQ.abilityPressed==true) {
             fireball = new FireBall();
             fireball.setDirection(direction);
-            attackX = fireball.setxPos(x1);
-            attackY = fireball.setyPos(y1 + 10);
+            attackX = fireball.setxPos(x1+30);
+            attackY = fireball.setyPos(y1+30);
 
             keyQ.abilityPressed = false;
         }
@@ -309,16 +309,16 @@ public class Player extends Entity {
         if (fireball != null){
             fireball.draw(g);
             if(fireball.direction.equals("right")){
-                fireball.xPos += 4;
+                fireball.xPos += 10;
             }
             if(fireball.direction.equals("left")){
-                fireball.xPos -= 4;
+                fireball.xPos -= 10;
             }
             if(fireball.direction.equals("down")){
-                fireball.yPos += 4;
+                fireball.yPos += 10;
             }
             if(fireball.direction.equals("up")){
-                fireball.yPos -= 4;
+                fireball.yPos -= 10;
             }
         }
 
