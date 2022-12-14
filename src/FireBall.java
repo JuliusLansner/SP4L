@@ -45,9 +45,11 @@ public class FireBall{
                 g.drawImage(pics[rn.nextInt(3)],this.xPos,this.yPos,100,100,null);
 
                 CollisionChecker collisionChecker = new CollisionChecker();
-                if(collisionChecker.collisionCheck(this.xPos,this.yPos,100,100,Player.x,Player.y,48,48)==true){
-                    System.out.println("hey");
+                if(collisionChecker.collisionCheck(this.xPos,this.yPos,100,100,Entity.x,Entity.y,48,48)==true){
                     Player.health-=1;
+                }
+                if(collisionChecker.collisionCheck(this.xPos,this.yPos,100,100,Entity.x1,Entity.y1,48,48)==true){
+                Player2.health2-=1;
                 }
 
         } catch (IOException e) {
