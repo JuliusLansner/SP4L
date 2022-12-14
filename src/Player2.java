@@ -8,8 +8,10 @@ public class Player2 extends Entity{
     int ability1 = x;
     KeyControl keyH;
     HealthBar healthbar = new HealthBar();
-    FireBall fireball = new FireBall();
+    FireBall fireball;
     KeyControlAbilities keyO;
+
+
 
 
     public Player2(KeyControl keyH, KeyControlAbilities keyO) {
@@ -169,23 +171,19 @@ public class Player2 extends Entity{
         healthbar.drawHealth(g,x,y-10,health);
         g.drawImage(imageRed1,x,y,48,48,null);
 
+        // ------- fireball ------- //
         if(keyO.abilityPressed==true) {
+            fireball = new FireBall();
+            fireball.setDirection(direction);
+            fireball.setxPos(x);
+            fireball.setyPos(y + 10);
 
-            fireball.draw(g, ability1x+x, ability1y+y + 10);
-            if(direction.equals("right")){
-                ability1x+=4;
-            }
-            if(direction.equals("left")){
-                ability1x--;
-            }
-            if(direction.equals("down")){
-                ability1y++;
-            }
-            if(direction.equals("up")){
-                ability1y--;
-            }
-
+            keyO.abilityPressed = false;
         }
+
+        if (fireball != null) fireball.draw(g);
+
+
 
     }
 

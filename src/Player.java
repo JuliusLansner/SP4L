@@ -15,10 +15,13 @@ public class Player extends Entity {
 
     KeyControl keyH;
     HealthBar healthbar = new HealthBar();
+    FireBall fireball;
 
-    FireBall fireball = new FireBall();
+
 
     KeyControlAbilities keyQ;
+
+
 
     public Player(KeyControl keyH, KeyControlAbilities keyQ) {
         this.keyH = keyH;
@@ -215,7 +218,7 @@ public class Player extends Entity {
 
     public void playerAttack() {
 
-        spriteCounter++;
+        //spriteCounter++;
 
         if (spriteCounter <= 5){ //show attack image 1 during first five frames
             spriteNum = 1;
@@ -284,24 +287,20 @@ public class Player extends Entity {
         healthbar.drawHealth(g,x,y-10,health);
         g.drawImage(image1,x,y,48,48,null);
 
+
+
+        // ------- fireball ------- //
         if(keyQ.abilityPressed==true) {
+            fireball = new FireBall();
+            fireball.setDirection(direction);
+            fireball.setxPos(x);
+            fireball.setyPos(y + 10);
 
-                fireball.draw(g, ability1x+x, ability1y+y + 10);
-
-                if(direction.equals("right")){
-                    ability1x+=4;
-                }
-                if(direction.equals("left")){
-                    ability1x--;
-                }
-                if(direction.equals("down")){
-                    ability1y++;
-                }
-                if(direction.equals("up")){
-                    ability1y--;
-                }
-
+            keyQ.abilityPressed = false;
         }
+
+        if (fireball != null) fireball.draw(g);
+
 
     }
 }

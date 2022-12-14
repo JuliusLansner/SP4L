@@ -44,6 +44,8 @@ char abilityKey;
     }
         if ((keyTouched == KeyEvent.VK_O)){
             oPressed = false;
+
         }
+
 }
 }

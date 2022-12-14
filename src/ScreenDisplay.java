@@ -11,7 +11,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
     KeyControl keys = new KeyControl('W','S','A','D');
     KeyControl keys2 = new KeyControl('I','K','J','L');
     KeyControlAbilities player1AB = new KeyControlAbilities('E');
-    KeyControlAbilities player2AB = new KeyControlAbilities('Q');
+    KeyControlAbilities player2AB = new KeyControlAbilities('U');
     Player player1 = new Player(keys,player1AB);
     Player2 player2 = new Player2(keys2,player2AB);
 
