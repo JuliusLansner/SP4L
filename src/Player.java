@@ -302,7 +302,21 @@ public class Player extends Entity {
             keyQ.abilityPressed = false;
         }
 
-        if (fireball != null) fireball.draw(g);
+        if (fireball != null){
+            if(fireball.direction.equals("right")){
+                fireball.xPos += 4;
+            }
+            if(fireball.direction.equals("left")){
+                fireball.xPos -= 4;
+            }
+            if(fireball.direction.equals("down")){
+                fireball.yPos += 4;
+            }
+            if(fireball.direction.equals("up")){
+                fireball.yPos -= 4;
+            }
+            fireball.draw(g);
+        }
 
 
     }

@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class FireBall{
 
-    private String direction = "";
+    public String direction = "";
     public int xPos;
     public int yPos;
 
@@ -31,7 +31,7 @@ public class FireBall{
 
     public void draw(Graphics g){
 
-        update();
+
 
         BufferedImage[] pics = new BufferedImage[3];
         Random rn = new Random();
