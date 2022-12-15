@@ -14,6 +14,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
     KeyControlAbilities player2AB = new KeyControlAbilities('U');
     Player player1 = new Player(keys,player1AB);
     Player2 player2 = new Player2(keys2,player2AB);
+    Sound sound = new Sound();
 
 
     JFrame sd1 = new JFrame();
@@ -51,6 +52,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
         screen.setVisible(true);
         screen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//closes the program when the window is closed
         screen.pack();// Does so the screen size adjust to the JPanels size
+        playMusic(0);
 
 
     }
@@ -80,6 +82,21 @@ public class ScreenDisplay extends JPanel implements Runnable {
             totalTimePlusInterval+=drawInterval;
         }
     }
+
+    public void playMusic(int i){
+        sound.setMusicFile(i);
+        sound.playMusic();
+        sound.loopMusic();
+    }
+
+    public void playSEMusic(int i){
+        sound.setMusicFile(i);
+        sound.playMusic();
+    }
+    public void stopSEMusic(){
+        sound.stopMusic();
+    }
+
 
 
 
@@ -112,5 +129,6 @@ player2.update();
         StartGame start = new StartGame();
         screen();
         runGameThread();
+
     }
 }

@@ -45,15 +45,15 @@ private boolean fireHit = false;
             g.drawImage(pics[rn.nextInt(3)], this.xPos, this.yPos, 100, 100, null);
 
                 CollisionChecker collisionChecker = new CollisionChecker();
-                if(collisionChecker.collisionCheck(this.xPos,this.yPos,80,80,Entity.x,Entity.y,30,30)==true){
+            /*if(collisionChecker.collisionCheck(this.xPos,this.yPos,80,80,Entity.x,Entity.y,30,30)==true){
                     Player.health-=4;
 
 
-                }
-                if(collisionChecker.collisionCheck(this.xPos,this.yPos,80,80,Entity.x1,Entity.y1,30,30)==true){
+                }*/
+                /*if(collisionChecker.collisionCheck(this.xPos,this.yPos,80,80,Entity.x1,Entity.y1,30,30)==true){
                 Player2.health2-=4;
 
-                }
+                }*/
 
         } catch (IOException e) {
             throw new RuntimeException(e);
