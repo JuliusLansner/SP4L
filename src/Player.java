@@ -411,7 +411,8 @@ public class Player extends Entity {
             }
 
             if (collisionCheck.collisionCheck(x1, y1, playerwidth, playerheight, 84, 134, wallwidth, wallheight) == true) {
-                //Question stuff here
+                Questions q = new Questions();
+                q.questionpopup1();
             }
         }
     }

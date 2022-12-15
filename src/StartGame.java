@@ -29,13 +29,13 @@ MainMenu screen = new MainMenu();
       sd.sd1.add(panel);
 
       panel.setLayout(null);
-      Alabel = new JLabel("User A:");
+      Alabel = new JLabel("Player 1:");
       Alabel.setBounds(10,20,80,25);
       panel.add(Alabel);
       AuserText.setBounds(100,20,165,25);
       panel.add(AuserText);
 
-      Blabel = new JLabel("User B:");
+      Blabel = new JLabel("Player 2");
       Blabel.setBounds(10,50,80,25);
       panel.add(Blabel);
       BuserText.setBounds(100,50,165,25);
@@ -45,7 +45,7 @@ MainMenu screen = new MainMenu();
       Continue.addActionListener(this);
       panel.add(Continue);
       String userA = AuserText.getText();
-       String userB = BuserText.getText();
+      String userB = BuserText.getText();
 
     }
 
