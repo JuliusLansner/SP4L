@@ -491,7 +491,13 @@ collisionObstacles();
             if(fireball.direction.equals("up")){
                 fireball.yPos -= fireballspeed;
             }
-            
+
+            if(collisionCheck.collisionCheck(fireball.xPos,fireball.yPos,80,80,Entity.x1,Entity.y1,30,30)==true){
+                Player2.health2-=4;
+                fireball = null;
+
+            }
+
         }
 
 

@@ -8,6 +8,7 @@ import java.io.IOException;
 //IN GamePanel, remove code in 'update', REPLACE WITH player.update();
 //REMOVE CODE IN 'draw', REPLACE WITH.
 public class Player extends Entity {
+    CollisionChecker collisionChecker = new CollisionChecker();
     FireBall fireball;
     public int attackX;
     public int attackY;
@@ -511,6 +512,12 @@ public class Player extends Entity {
             }
             if(fireball.direction.equals("up")){
                 fireball.yPos -= fireballspeed;
+            }
+            if(collisionChecker.collisionCheck(fireball.xPos+fireballspeed,fireball.yPos+fireballspeed,80,80,Entity.x,Entity.y,30,30)==true){
+                Player.health-=4;
+                fireball = null;
+
+
             }
         }
 
