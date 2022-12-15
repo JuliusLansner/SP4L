@@ -4,8 +4,9 @@ import java.awt.event.ActionListener;
 import java.util.Scanner;
 public class Questions {
 
-    public void askQuestionPlus() {
-        int score = 0;
+    public void askQuestionPlus(int counter) {
+
+        counter=0;
         for (int i = 0; i < 3; i++) {
             int number1 = (int) (Math.random() * 10) + 10;
             int number2 = (int) (Math.random() * 10) + 10;
@@ -18,8 +19,8 @@ public class Questions {
             }
             if ((number1 + number2) == answer) {
                 System.out.println("That is correct!");
-                score++;
-                System.out.println("Your new score is: " + score);
+                counter++;
+                System.out.println("Your new score is: " + counter);
             }
         }
     }
@@ -70,6 +71,9 @@ public void questionpopup(int counter){
 
 
 }
+
+
+
 
 
 
