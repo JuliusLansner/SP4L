@@ -8,7 +8,7 @@ public class Sound {
     //used to open audio file
     Clip clip;
 
-    URL soundURL[] = new URL[5]; //to store music file path
+    URL[] soundURL = new URL[5]; //to store music file path
 
     public Sound(){
         soundURL[0] = getClass().getResource("Sound/FinalBattle.wav");
