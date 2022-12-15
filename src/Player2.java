@@ -491,6 +491,7 @@ collisionObstacles();
             if(fireball.direction.equals("up")){
                 fireball.yPos -= fireballspeed;
             }
+            
         }
 
 
