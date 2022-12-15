@@ -61,6 +61,7 @@ MainMenu screen = new MainMenu();
     //TODO -- Go to GAME AFTER THIS
     System.out.println("players: "+ userA + " and " + userB+" are playing against eachother");
     System.out.println("both start at 0 points");
+    System.out.println("Player 1 is BLUE, player 2 is RED");
 
 
     sd.sd1.setVisible(false);
