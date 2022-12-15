@@ -4,8 +4,8 @@ public class Main {
        //mainmenu.aMainMenu();
       //ScreenDisplay screen = new ScreenDisplay();
         //StartGame sg = new StartGame();
-        //ScreenDisplay sd = new ScreenDisplay();
-       // sd.play();
+        ScreenDisplay sd = new ScreenDisplay();
+        sd.play();
         //screen.screen();
         //screen.runGameThread();
 
