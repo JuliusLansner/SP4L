@@ -30,7 +30,7 @@ public class Player2 extends Entity{
         speed = 4;
         health = 40;
         direction = "down";
-        fireCount2 = 1;
+        fireCount2 = 0;
     }
 
     public void collisionMapboundaryFireball(int fireX, int fireY){
@@ -394,8 +394,9 @@ public class Player2 extends Entity{
             }
         }
 
-        if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,800,593,wallwidth,wallheight)==true){
-            //Question stuff here
+        if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,800,593,wallwidth+10,wallheight+10)==true){
+            Questions q = new Questions();
+            q.questionpopup2();
         }
     }
 

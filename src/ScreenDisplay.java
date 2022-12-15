@@ -28,7 +28,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
     int screenRow = 16;
     int screenWidth = tileSize * screenCol;
     int screenHeight = tileSize * screenRow;
-    int fps = 80;
+    int fps = 60;
 
 
 
@@ -69,7 +69,7 @@ public class ScreenDisplay extends JPanel implements Runnable {
         while(gameThread!=null){ //Gameloop that runs this until thread stops
             updatePosition();
             repaint();//Runs paint method
-            long remainingTimeInMili = (totalTimePlusInterval-System.nanoTime())/1000000;
+            long remainingTimeInMili = (totalTimePlusInterval-System.nanoTime())/10000000;
             if(remainingTimeInMili<0){
                 remainingTimeInMili=0;
             }

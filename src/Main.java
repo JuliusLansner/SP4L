@@ -7,10 +7,8 @@ public class Main {
         ScreenDisplay sd = new ScreenDisplay();
         sd.play();
         //screen.screen();
-        //screen.runGameThread();
+       // screen.runGameThread();
 
-        Questions q = new Questions();
-        q.questionpopup();
 
 
 
