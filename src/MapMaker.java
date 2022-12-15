@@ -26,11 +26,15 @@ public class MapMaker {
         loadMapTiles();
 
         g.drawImage(loadMapTiles()[0],0,0,48*20,48*16,null);
-        g.drawImage(loadMapTiles()[2],150,150,6*6,6*6,null);
         g.drawImage(loadMapTiles()[3],150,650,6*6,6*6,null);
         g.drawImage(loadMapTiles()[3],800,150,6*6,6*6,null);
         g.drawImage(loadMapTiles()[3],800,650,6*6,6*6,null);
         g.drawImage(loadMapTiles()[4],366,75,6*6,6*6,null);
+        g.drawImage(loadMapTiles()[2],120,100,6*6,6*6,null);
+        g.drawImage(loadMapTiles()[2],120,133,6*6,6*6,null);
+        g.drawImage(loadMapTiles()[2],84,100,6*6,6*6,null);
+        g.drawImage(loadMapTiles()[2],120,166,6*6,6*6,null);
+        g.drawImage(loadMapTiles()[2],84,166,6*6,6*6,null);
 
         }
 
