@@ -132,6 +132,20 @@ MainMenu screen = new MainMenu();
     }
   }
 
+
+  //move to screendisplay
+  MainMenu screen = new MainMenu();
+
+  JFrame sd1 = new JFrame();
+  void play(){
+    StartGame start = new StartGame();
+    screen();
+    runGameThread();
+  }
+  //move to Main
+  ScreenDisplay sd = new ScreenDisplay();
+    sd.play();
+
 }
 
 
