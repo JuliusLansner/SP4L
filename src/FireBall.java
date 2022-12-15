@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Random;
 
 public class FireBall{
-private boolean fireHit = false;
+private final boolean fireHit = false;
     public String direction = "";
     public int xPos;
     public int yPos;

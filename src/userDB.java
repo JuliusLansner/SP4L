@@ -2,9 +2,9 @@ import java.sql.*;
 
 public class userDB {
     Connection connection; //Laver et object at connection.
-    private String username = "root";
+    private final String username = "root";
     //change password
-    private String password = "Mevgamor970";
+    private final String password = "Mevgamor970";
     String query3 = "INSERT INTO users (users)" + "VALUES(?)";
 
     //change table name, (jflix). "?" is still needed.

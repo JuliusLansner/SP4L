@@ -9,12 +9,12 @@ import java.sql.SQLException;
 public class StartGame implements ActionListener {
   String sql = "INSERT INTO users (users)" + "VALUES(?)";
 
-private static JPanel panel = new JPanel();
+private static final JPanel panel = new JPanel();
 private static JLabel Alabel;
 private static JLabel Blabel;
-private static JTextField AuserText = new JTextField(20);
-private static JTextField BuserText = new JTextField(20);
-private static JButton Continue = new JButton("Continue");
+private static final JTextField AuserText = new JTextField(20);
+private static final JTextField BuserText = new JTextField(20);
+private static final JButton Continue = new JButton("Continue");
 MainMenu screen = new MainMenu();
 
  ScreenDisplay sd = new ScreenDisplay();
