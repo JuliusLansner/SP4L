@@ -1,0 +1,38 @@
+Menu->
+"Math Sorceress"
+Play game -> player a name + player b name -> start game
+
+Leaderboard -> navn + rundt vundet
+
+
+Play game(spillet) ->
+
+Arena -> firkant med obstacles, 1 indgang på hver side, Spørgsmål box + svarbox + point box se discord 09/12/2022
+
+functionality i arena -> bevæge sig i alle retninger,
+ability(ies):
+
+Vi starter med fireball der oneshotter.
+
+Damage:
+Fireball - simple fireball ability. Does mediocre damage - long range
+Poison dart - shoot a dart, poisoning the target, dealing damage over time - medium range
+
+Defense:
+Heal - heals yourself for x amount
+Shield - small shield and movement boost, for a short duration
+
+Utility:
+Move quick - passively increased base movement speed. Can be activated to get a burst of speed.
+
+
+Regler i spillet:
+Brugerne skal udføre simple matematikopgaver for at vinde spillet.
+Hver bruger får stillet tre spørgsmål, for hvert rigtigt svar, får man et spellpoint.
+Spellpoints bruges til at caste abilities.
+Fireball som eksempel koster 1 spellpoint.
+
+ Når spørgsmålene er blevet besvaret, begynder runden, og spillerne kan angribe/undvige hinandens angreb.
+
+Default 5 runTer.
+

@@ -41,7 +41,7 @@ public class Player extends Entity {
         speed = 4;
         health2 = 40;
         direction = "down";
-        fireCount1 = 1;
+        fireCount1 = 0;
     }
     public void collisionMapboundaryFireball(int fireX, int fireY){
         if(collisionCheck.collisionCheck(fireX,fireY,10,35,0,0,20,48*16)==true){ //venstre væg
@@ -409,7 +409,9 @@ public class Player extends Entity {
 
         if(collisionCheck.collisionCheck(x1,y1,playerwidth,playerheight,84,134,wallwidth+10,wallheight+10)==true){
             Questions q = new Questions();
-            q.questionpopup1();
+           if(fireCount1 == 0){
+                q.questionpopup1();
+            }
         }
     }
 
@@ -634,6 +636,7 @@ public class Player extends Entity {
 
                     keyQ.abilityPressed = false;
                     fireCount1--;
+                    System.out.println(fireCount1);
                 }
                 int fireballspeed = 30;
                 if (fireball != null) {

@@ -5,26 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.Scanner;
 public class Questions {
 
-    public void askQuestionPlus(int counter) {
 
-        counter = 0;
-        for (int i = 0; i < 3; i++) {
-            int number1 = (int) (Math.random() * 10) + 10;
-            int number2 = (int) (Math.random() * 10) + 10;
-            Scanner input = new Scanner(System.in);
-            String question = "What is " + number1 + "+" + number2 + "?"; //Shouldn't be a SOUT, but instead show on screen
-            int answer = input.nextInt();
-
-            if ((number1 + number2) != answer) {
-                System.out.println("Incorrect. Next question ...");
-            }
-            if ((number1 + number2) == answer) {
-                System.out.println("That is correct!");
-                counter++;
-                System.out.println("Your new score is: " + counter);
-            }
-        }
-    }
 
     public void questionpopup1() {
 
@@ -60,23 +41,26 @@ public class Questions {
             public void actionPerformed(ActionEvent e) {
                 String text = answerbox.getText();
                 int answer = Integer.parseInt(text);
-                if (Entity.fireCount1 == 0) {
-                    questionpopup1();
+
                     sd.screen.setVisible(false);
                     sd.screen.dispose();
                     System.out.println(answer + "= ANSWER");
                     if (answer == correct) {
                         Entity.fireCount1++;
                         System.out.println(Entity.fireCount1 + "= FIRECOUNT");
+
                     } else
-                        System.out.println("WRONG");
+                        questionpopup1();
+
                     sd.screen.setVisible(false);
                     sd.screen.dispose();
 
-                } else
-                    System.out.println("You already have a fireball spell cast available to you.");
-                sd.screen.setVisible(false);
-                sd.screen.dispose();
+                 if(Entity.fireCount1 == 1){
+                    System.out.println("You have 1 point.");
+                    sd.screen.setVisible(false);
+                    sd.screen.dispose();
+
+                }
 
 
             }
@@ -119,22 +103,25 @@ public class Questions {
             public void actionPerformed(ActionEvent e) {
                 String text = answerbox.getText();
                 int answer = Integer.parseInt(text);
-                if (Entity.fireCount2 == 0) {
-                    questionpopup2();
-                    sd.screen.setVisible(false);
-                    sd.screen.dispose();
-                    if (answer == correct) {
-                        Entity.fireCount2++;
-                        System.out.println(Entity.fireCount2 + "= FIRECOUNT");
-                    } else
-                        System.out.println("WRONG");
+
+                sd.screen.setVisible(false);
+                sd.screen.dispose();
+                System.out.println(answer + "= ANSWER");
+                if (answer == correct) {
+                    Entity.fireCount2++;
+                    System.out.println(Entity.fireCount2 + "= FIRECOUNT");
+
+                } else
+                    questionpopup1();
+                sd.screen.setVisible(false);
+                sd.screen.dispose();
+
+                if(Entity.fireCount2 == 1){
+                    System.out.println("You have 1 point.");
                     sd.screen.setVisible(false);
                     sd.screen.dispose();
 
-                } else
-                    System.out.println("You already have a fireball spell cast available to you.");
-                sd.screen.setVisible(false);
-                sd.screen.dispose();
+                }
 
 
             }
