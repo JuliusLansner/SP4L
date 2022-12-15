@@ -37,11 +37,15 @@ public class MapMaker {
         g.drawImage(loadMapTiles()[2],120,166,6*6,6*6,null);
         g.drawImage(loadMapTiles()[2],84,166,6*6,6*6,null);
 
+        g.drawImage(loadMapTiles()[1],84,134,6*6,6*6,null);
+
         g.drawImage(loadMapTiles()[2],800,625,6*6,6*6,null);
         g.drawImage(loadMapTiles()[2],764,625,6*6,6*6,null);
         g.drawImage(loadMapTiles()[2],764,590,6*6,6*6,null);
         g.drawImage(loadMapTiles()[2],764,558,6*6,6*6,null);
         g.drawImage(loadMapTiles()[2],800,558,6*6,6*6,null);
+
+        g.drawImage(loadMapTiles()[1],800,593,6*6,6*6,null);
 
         }
 

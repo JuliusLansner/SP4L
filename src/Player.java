@@ -336,6 +336,10 @@ public class Player extends Entity {
 
             }
         }
+
+        if(collisionCheck.collisionCheck(x1,y1,playerwidth,playerheight,84,134,wallwidth,wallheight)==true){
+          //Question stuff here
+        }
     }
 
 
@@ -513,13 +517,13 @@ public class Player extends Entity {
 
     }
 
-    public void playerQ1(){
+    /*public void playerQ1(){
         if(Entity.fireCount1 = 0  && player1.x = collision1x ){
             questionpopup();
             Questions q = new Questions();
             q.askQuestionPlus(Entity.fireCount1);
         }
-    }
+    }*/
 }
 
 
