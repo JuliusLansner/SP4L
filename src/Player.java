@@ -317,6 +317,13 @@ public class Player extends Entity {
 
 
     }
+
+    public void playerQ1(){
+        if(Entity.fireCount1 = 0  && player1.x = collision1x ){
+            Questions q = new Questions();
+            q.askQuestionPlus(Entity.fireCount1);
+        }
+    }
 }
 
 
