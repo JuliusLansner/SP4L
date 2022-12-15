@@ -620,8 +620,8 @@ collisionObstacles();
             playSEMusic(1);
             fireball = new FireBall();
             fireball.setDirection(direction);
-            fireball.setxPos(x + 30);
-            fireball.setyPos(y + 30);
+            fireball.setxPos(x);
+            fireball.setyPos(y);
 
             keyO.abilityPressed = false;
         }

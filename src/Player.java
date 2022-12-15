@@ -629,8 +629,8 @@ public class Player extends Entity {
                     playSEMusic(1);
                     fireball = new FireBall();
                     fireball.setDirection(direction);
-                    attackX = fireball.setxPos(x1 + 30);
-                    attackY = fireball.setyPos(y1 + 30);
+                    attackX = fireball.setxPos(x1);
+                    attackY = fireball.setyPos(y1);
 
                     keyQ.abilityPressed = false;
                     fireCount1--;
