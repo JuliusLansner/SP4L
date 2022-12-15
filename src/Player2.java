@@ -9,6 +9,7 @@ public class Player2 extends Entity{
     HealthBar healthbar = new HealthBar();
     FireBall fireball;
     KeyControlAbilities keyO;
+    Sound sound2 = new Sound();
 
 
 
@@ -357,6 +358,7 @@ public class Player2 extends Entity{
             attackLeft2Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_left_2_red.gif"));
             attackRight1Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_right_1_red.png"));
             attackRight2Red = ImageIO.read(getClass().getResourceAsStream("res/boy_axe_right_2_red.png"));
+            playerDeathRed = ImageIO.read(getClass().getResourceAsStream("res/boy_left_1_red_death.png"));
 
         }catch (IOException e){
             e.printStackTrace();
@@ -369,8 +371,13 @@ public class Player2 extends Entity{
 collisionMapboundary();
 collisionObstacles();
 
+        playerDeath();
+
+
+
         if (keyO.oPressed) { //Might need to change something here?
             playerAttack();
+
 
 
         }else if (keyH.upPressed == true) {
@@ -398,6 +405,7 @@ collisionObstacles();
     }
 
     public void playerAttack() {
+        //playSEMusic(2); // Could be used for SE. Sound file is crap though.
         spriteCounterAttack++;
 
         if (spriteCounterAttack >= 15){ //show attack image 1 during first fifteen frames
@@ -413,6 +421,19 @@ collisionObstacles();
         }
     }
 
+    public void playerDeath() {
+        if (Player2.health == 0) {
+            playerDeath = true;
+            System.out.println("DEATH BY FIREBALL");
+        }
+    }
+
+    public void playSEMusic(int i){
+        sound2.setMusicFile(i);
+        sound2.playMusic();
+    }
+
+
 
 
     public void drawRed(Graphics g) {
@@ -421,74 +442,132 @@ collisionObstacles();
         BufferedImage imageRed1 = null;
 
         //Depending on players direction and attacking stage, a different image is shown.
-        switch(direction) {
+        switch (direction) {
             case "up":
-                if (!keyO.oPressed){
-                    if(spriteNum == 1) {imageRed = up1Red;}
-                    if(spriteNum == 2) {imageRed = up2Red;}
+                if (!keyO.oPressed) {
+                    if (spriteNum == 1) {
+                        imageRed = up1Red;
+                    }
+                    if (spriteNum == 2) {
+                        imageRed = up2Red;
+                    }
                 }
-                if (keyO.oPressed){
-                    if(spriteNumAttack == 1) {imageRed1 = attackUp1Red;}
-                    if(spriteNumAttack == 2) {imageRed1 = attackUp2Red;}
+                if (keyO.oPressed) {
+                    if (spriteNumAttack == 1) {
+                        imageRed1 = attackUp1Red;
+                    }
+                    if (spriteNumAttack == 2) {
+                        imageRed1 = attackUp2Red;
+                    }
+                }
+                if (playerDeath == true) {
+                    spriteNumDeath = 1;
+                    if (spriteNumDeath == 1) {
+                        imageRed = playerDeathRed;
+                    }
                 }
                 break;
             case "down":
-                if (!keyO.oPressed){
-                    if(spriteNum == 1) {imageRed = down1Red;}
-                    if(spriteNum == 2) {imageRed = down2Red;}
+                if (!keyO.oPressed) {
+                    if (spriteNum == 1) {
+                        imageRed = down1Red;
+                    }
+                    if (spriteNum == 2) {
+                        imageRed = down2Red;
+                    }
                 }
                 if (keyO.oPressed) {
-                    if (spriteNumAttack == 1) {imageRed1 = attackDown1Red;}
-                    if (spriteNumAttack == 2) {imageRed1 = attackDown2Red;}
+                    if (spriteNumAttack == 1) {
+                        imageRed1 = attackDown1Red;
+                    }
+                    if (spriteNumAttack == 2) {
+                        imageRed1 = attackDown2Red;
+                    }
+                }
+                if (playerDeath == true) {
+                    spriteNumDeath = 1;
+                    if (spriteNumDeath == 1) {
+                        imageRed = playerDeathRed;
+                    }
                 }
                 break;
             case "left":
-                if (!keyO.oPressed){
-                    if(spriteNum == 1) {imageRed = left1Red;}
-                    if(spriteNum == 2) {imageRed = left2Red;}
+                if (!keyO.oPressed) {
+                    if (spriteNum == 1) {
+                        imageRed = left1Red;
+                    }
+                    if (spriteNum == 2) {
+                        imageRed = left2Red;
+                    }
                 }
-                if (keyO.oPressed){
-                    if(spriteNumAttack == 1) {imageRed1 = attackLeft1Red;}
-                    if(spriteNumAttack == 2) {imageRed1 = attackLeft2Red;}
+                if (keyO.oPressed) {
+                    if (spriteNumAttack == 1) {
+                        imageRed1 = attackLeft1Red;
+                    }
+                    if (spriteNumAttack == 2) {
+                        imageRed1 = attackLeft2Red;
+                    }
+                }
+                if (playerDeath == true) {
+                    spriteNumDeath = 1;
+                    if (spriteNumDeath == 1) {
+                        imageRed = playerDeathRed;
+                    }
                 }
                 break;
             case "right":
-                if (!keyO.oPressed){
-                    if(spriteNum == 1) {imageRed = right1Red;}
-                    if(spriteNum == 2) {imageRed = right2Red;}
+                if (!keyO.oPressed) {
+                    if (spriteNum == 1) {
+                        imageRed = right1Red;
+                    }
+                    if (spriteNum == 2) {
+                        imageRed = right2Red;
+                    }
                 }
-                if (keyO.oPressed){
-                    if(spriteNumAttack == 1) {imageRed1 = attackRight1Red;}
-                    if(spriteNumAttack == 2) {imageRed1 = attackRight2Red;}
+                if (keyO.oPressed) {
+                    if (spriteNumAttack == 1) {
+                        imageRed1 = attackRight1Red;
+                    }
+                    if (spriteNumAttack == 2) {
+                        imageRed1 = attackRight2Red;
+                    }
+                }
+                if (playerDeath == true) {
+                    spriteNumDeath = 1;
+                    if (spriteNumDeath == 1) {
+                        imageRed = playerDeathRed;
+                    }
                 }
                 break;
         }
         g.drawImage(imageRed, x, y, 48, 48, null);
-        healthbar.drawHealth(g,x,y-10,health);
-        g.drawImage(imageRed1,x,y,48,48,null);
+        healthbar.drawHealth(g, x, y - 10, health);
+        g.drawImage(imageRed1, x, y, 48, 48, null);
+
 
         // ------- fireball ------- //
-        if(keyO.abilityPressed==true&&fireCount2>0) {
+        if (keyO.abilityPressed == true && fireCount2 > 0) {
+            playSEMusic(1);
             fireball = new FireBall();
             fireball.setDirection(direction);
-            fireball.setxPos(x+30);
+            fireball.setxPos(x + 30);
             fireball.setyPos(y + 30);
 
             keyO.abilityPressed = false;
         }
         int fireballspeed = 30;
-        if (fireball != null){
+        if (fireball != null) {
             fireball.draw(g);
-            if(fireball.direction.equals("right")){
+            if (fireball.direction.equals("right")) {
                 fireball.xPos += fireballspeed;
             }
-            if(fireball.direction.equals("left")){
+            if (fireball.direction.equals("left")) {
                 fireball.xPos -= fireballspeed;
             }
-            if(fireball.direction.equals("down")){
+            if (fireball.direction.equals("down")) {
                 fireball.yPos += fireballspeed;
             }
-            if(fireball.direction.equals("up")){
+            if (fireball.direction.equals("up")) {
                 fireball.yPos -= fireballspeed;
             }
 
@@ -500,9 +579,9 @@ collisionObstacles();
 
         }
 
-
-
+        }
     }
+
     /*public void playerQ2(){
         if(Entity.fireCount2 = 0  && player2.x = collision1x ){
             Questions q = new Questions();
@@ -510,4 +589,3 @@ collisionObstacles();
         }
     }*/
 
-}
