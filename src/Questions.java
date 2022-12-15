@@ -21,6 +21,8 @@ public class Questions {
         }
     }
 
+
+
 /*
     public void askQuestionMinus() {
         int score = 0;
