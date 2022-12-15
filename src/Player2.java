@@ -29,8 +29,7 @@ public class Player2 extends Entity{
         speed = 4;
         health = 40;
         direction = "down";
-        ability1x = 0;
-        ability1y = 0;
+        fireCount2 = 1;
     }
 
     public void getPlayer2Image (){
@@ -170,7 +169,7 @@ public class Player2 extends Entity{
         g.drawImage(imageRed1,x,y,48,48,null);
 
         // ------- fireball ------- //
-        if(keyO.abilityPressed==true) {
+        if(keyO.abilityPressed==true&&fireCount2>0) {
             fireball = new FireBall();
             fireball.setDirection(direction);
             fireball.setxPos(x+30);

@@ -7,6 +7,8 @@ public class Entity {
     public static int x1, y1;
     public static int x, y;
 
+    public static int fireCount1, fireCount2;
+
     public int ability1x;
     public int ability1y;
     public int speed;
