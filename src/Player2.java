@@ -104,7 +104,7 @@ public class Player2 extends Entity{
 
     public void collisionMapboundary(){
         if(collisionCheck.collisionCheck(x,y,10,35,0,0,20,48*16)==true){ //venstre væg
-            
+
             switch (direction){
                 case"up":
                     y+=4;
