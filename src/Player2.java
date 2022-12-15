@@ -104,7 +104,7 @@ public class Player2 extends Entity{
 
     public void collisionMapboundary(){
         if(collisionCheck.collisionCheck(x,y,10,35,0,0,20,48*16)==true){ //venstre væg
-            System.out.println("hey");
+            
             switch (direction){
                 case"up":
                     y+=4;
@@ -123,7 +123,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,25,35,0,0,48*20,5)==true){ //øverste væg
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -141,7 +141,7 @@ public class Player2 extends Entity{
             }
         }
         if(collisionCheck.collisionCheck(x,y,25,35,920,0,48,48*16)==true){ //højre væg
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -160,7 +160,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,25,35,0,770,48*20,50)==true){ //Sidste vandrette væg
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -186,7 +186,7 @@ public class Player2 extends Entity{
         int wallwidth = 20;
         int wallheight = 20;
         if(collisionCheck.collisionCheck(x,y,25,35,366,75,25,20)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -205,7 +205,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,120,100,wallwidth,wallheight)==true){
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -224,7 +224,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,120,133,wallwidth,wallheight)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -243,7 +243,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,84,100,wallwidth,wallheight)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -262,7 +262,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,120,166,wallwidth,wallheight)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -281,7 +281,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,84,166,wallwidth,wallheight)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -300,7 +300,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,800,625,wallwidth,wallheight)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -319,7 +319,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,764,625,wallwidth,wallheight)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -338,7 +338,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,764,590,wallwidth,wallheight)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -357,7 +357,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,764,558,wallwidth,wallheight)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;
@@ -376,7 +376,7 @@ public class Player2 extends Entity{
         }
 
         if(collisionCheck.collisionCheck(x,y,playerwidth,playerheight,800,558,wallwidth,wallheight)==true){ // den lille ildkugle
-            System.out.println("hey");
+
             switch (direction){
                 case"up":
                     y+=4;

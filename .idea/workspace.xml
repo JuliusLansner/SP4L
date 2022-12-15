@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b22ab36b-8002-4293-b6e8-c03fc8565457" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Sound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sound/FinalBattle.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sound/burning.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sound/gameover.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sound/receivedamage.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sound/sword_hit.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_left_1_dead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/boy_left_1_red_death.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b22ab36b-8002-4293-b6e8-c03fc8565457" name="Changes" comment="Hey">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScreenDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScreenDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +24,19 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2Ix75cDa6vHPrMG6ngBnWCbVDHR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,5 +47,19 @@
       <updated>1671111199043</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SP4L$Main.ic" NAME="Main Coverage Results" MODIFIED="1671109533781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
