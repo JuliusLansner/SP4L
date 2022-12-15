@@ -330,6 +330,87 @@ public class Player extends Entity {
 
             }
         }
+
+        if(collisionCheck.collisionCheck(x1,y1,playerwidth,playerheight,764,625,wallwidth,wallheight)==true){ // den lille ildkugle
+
+            switch (direction){
+                case"up":
+                    y1+=4;
+                    break;
+                case "down":
+                    y1-=4;
+                    break;
+                case"left":
+                    x1+=4;
+                    break;
+                case"right":
+                    x1-=4;
+                    break;
+
+            }
+        }
+
+        if(collisionCheck.collisionCheck(x1,y1,playerwidth,playerheight,764,590,wallwidth,wallheight)==true){ // den lille ildkugle
+
+            switch (direction){
+                case"up":
+                    y1+=4;
+                    break;
+                case "down":
+                    y1-=4;
+                    break;
+                case"left":
+                    x1+=4;
+                    break;
+                case"right":
+                    x1-=4;
+                    break;
+
+            }
+        }
+
+        if(collisionCheck.collisionCheck(x1,y1,playerwidth,playerheight,764,558,wallwidth,wallheight)==true){ // den lille ildkugle
+
+            switch (direction){
+                case"up":
+                    y1+=4;
+                    break;
+                case "down":
+                    y1-=4;
+                    break;
+                case"left":
+                    x1+=4;
+                    break;
+                case"right":
+                    x1-=4;
+                    break;
+
+            }
+        }
+
+        if(collisionCheck.collisionCheck(x1,y1,playerwidth,playerheight,800,558,wallwidth,wallheight)==true){ // den lille ildkugle
+
+            switch (direction){
+                case"up":
+                    y1+=4;
+                    break;
+                case "down":
+                    y1-=4;
+                    break;
+                case"left":
+                    x1+=4;
+                    break;
+                case"right":
+                    x1-=4;
+                    break;
+
+            }
+        }
+
+        if(collisionCheck.collisionCheck(x1,y1,playerwidth,playerheight,800,593,wallwidth+10,wallheight+10)==true){
+            Questions q = new Questions();
+            q.questionpopup1();
+        }
     }
 
 
