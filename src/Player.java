@@ -11,8 +11,6 @@ public class Player extends Entity {
     FireBall fireball;
     public int attackX;
     public int attackY;
-    public int fireX;
-    public int fireY;
 
 
     CollisionChecker collisionCheck = new CollisionChecker();
@@ -43,12 +41,7 @@ public class Player extends Entity {
         speed = 4;
         health2 = 40;
         direction = "down";
-        ability1x = 0;
-        ability1y = 0;
-        attackY = 0;
-        attackX = 0;
-        fireX = 0;
-        fireY = 0;
+        fireCount1 = 0;
     }
 
 
@@ -297,7 +290,7 @@ public class Player extends Entity {
 
 
         // ------- fireball ------- //
-        if(keyQ.abilityPressed==true) {
+        if(keyQ.abilityPressed==true&&fireCount1>0) {
             fireball = new FireBall();
             fireball.setDirection(direction);
             attackX = fireball.setxPos(x1+30);

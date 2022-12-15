@@ -31,7 +31,6 @@ public class MapMaker {
         g.drawImage(loadMapTiles()[3],800,150,6*6,6*6,null);
         g.drawImage(loadMapTiles()[3],800,650,6*6,6*6,null);
         g.drawImage(loadMapTiles()[4],366,75,6*6,6*6,null);
-        g.setColor(Color.black);
 
         }
 
