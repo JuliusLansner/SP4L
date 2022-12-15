@@ -16,6 +16,8 @@ public class ScreenDisplay extends JPanel implements Runnable {
     Player2 player2 = new Player2(keys2,player2AB);
 
 
+    JFrame sd1 = new JFrame();
+
 
     MapMaker map = new MapMaker();
     HealthBar health = new HealthBar();
@@ -107,4 +109,9 @@ player2.update();
 
     }
 
+    void play(){
+        StartGame start = new StartGame();
+        screen();
+        runGameThread();
+    }
 }
