@@ -407,7 +407,7 @@ public class Player extends Entity {
             }
         }
 
-        if(collisionCheck.collisionCheck(x1,y1,playerwidth,playerheight,800,593,wallwidth+10,wallheight+10)==true){
+        if(collisionCheck.collisionCheck(x1,y1,playerwidth,playerheight,84,134,wallwidth+10,wallheight+10)==true){
             Questions q = new Questions();
             q.questionpopup1();
         }

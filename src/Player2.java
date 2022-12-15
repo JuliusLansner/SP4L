@@ -25,8 +25,8 @@ public class Player2 extends Entity{
 
     public void setDefaultValues() {
         //PERHAPS USE 'WIDTH/2' AND 'HEIGHT/2' TO SPAWN IN MIDDLE NO MATTER THE RESOLUTION
-        x = 100;
-        y = 100;
+        x = 800;
+        y = 500;
         speed = 4;
         health = 40;
         direction = "down";
