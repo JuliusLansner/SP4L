@@ -43,6 +43,75 @@ public class Player extends Entity {
         direction = "down";
         fireCount1 = 1;
     }
+    public void collisionMapboundaryFireball(int fireX, int fireY){
+        if(collisionCheck.collisionCheck(fireX,fireY,10,35,0,0,20,48*16)==true){ //venstre væg
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,25,35,0,0,48*20,5)==true){ //øverste væg
+            fireball = null;
+        }
+        if(collisionCheck.collisionCheck(fireX,fireY,25,35,920,0,48,48*16)==true){ //højre væg
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,25,35,0,770,48*20,50)==true){ //Sidste vandrette væg
+            fireball = null;
+        }
+
+    }
+
+    public void collisionObstaclesFireball(int fireX, int fireY){
+        int playerwidth = 20;
+        int playerheight = 30;
+        int wallwidth = 20;
+        int wallheight = 20;
+        if(collisionCheck.collisionCheck(fireX,fireY,25,35,366,75,25,20)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,120,100,wallwidth,wallheight)==true){
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,120,133,wallwidth,wallheight)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,84,100,wallwidth,wallheight)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,120,166,wallwidth,wallheight)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,84,166,wallwidth,wallheight)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,800,625,wallwidth,wallheight)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,764,625,wallwidth,wallheight)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,764,590,wallwidth,wallheight)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,764,558,wallwidth,wallheight)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+        if(collisionCheck.collisionCheck(fireX,fireY,playerwidth,playerheight,800,558,wallwidth,wallheight)==true){ // den lille ildkugle
+            fireball = null;
+        }
+
+    }
+
 
 
     public void collisionMapboundary() {
@@ -586,9 +655,9 @@ public class Player extends Entity {
                     if (collisionChecker.collisionCheck(fireball.xPos + fireballspeed, fireball.yPos + fireballspeed, 80, 80, Entity.x, Entity.y, 30, 30) == true) {
                         Player.health -= 4;
                         fireball = null;
-
-
                     }
+                    collisionMapboundaryFireball(fireball.xPos,fireball.yPos);
+                    collisionObstaclesFireball(fireball.xPos,fireball.yPos);
                 }
             }
 
