@@ -178,20 +178,20 @@ public class Player2 extends Entity{
 
             keyO.abilityPressed = false;
         }
-
+        int fireballspeed = 30;
         if (fireball != null){
             fireball.draw(g);
             if(fireball.direction.equals("right")){
-                fireball.xPos += 30;
+                fireball.xPos += fireballspeed;
             }
             if(fireball.direction.equals("left")){
-                fireball.xPos -= 30;
+                fireball.xPos -= fireballspeed;
             }
             if(fireball.direction.equals("down")){
-                fireball.yPos += 30;
+                fireball.yPos += fireballspeed;
             }
             if(fireball.direction.equals("up")){
-                fireball.yPos -= 30;
+                fireball.yPos -= fireballspeed;
             }
         }
 
