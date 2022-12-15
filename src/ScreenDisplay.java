@@ -4,7 +4,7 @@ import java.awt.event.KeyListener;
 import java.io.IOException;
 
 public class ScreenDisplay extends JPanel implements Runnable {
-    JFrame screen;
+    JFrame screen = new JFrame();
     FireBall fireball = new FireBall();
     CollisionChecker collisionCheck = new CollisionChecker();
     Thread gameThread;
@@ -47,7 +47,6 @@ public class ScreenDisplay extends JPanel implements Runnable {
     }
 
     public void screen(){
-        screen = new JFrame();
         screen.add(display());
         screen.setVisible(true);
         screen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//closes the program when the window is closed
