@@ -41,7 +41,7 @@ public class Player extends Entity {
         speed = 4;
         health2 = 40;
         direction = "down";
-        fireCount1 = 1;
+        fireCount1 = 0;
     }
 
 

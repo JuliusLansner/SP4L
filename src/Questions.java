@@ -40,33 +40,46 @@ public void questionpopup(){
     panel.add(button,BorderLayout.NORTH);
     answerbox.setBounds(100,20,165,25);
     panel.add(answerbox);
-    String text = answerbox.getText();
+
+
     JLabel label;
-    int answer = Integer.parseInt(text);
+
 
 
     int number1 = (int) (Math.random() * 10) + 10;
     int number2 = (int) (Math.random() * 10) + 10;
 
-    String question ="What is " + number1 + "+" + number2 + "?";
+    String question = "What is " + number1 + "+" + number2 + "?";
     int correct = (number1+number2);
     label = new JLabel(question);
     label.setBounds(10,20,80,25);
     panel.add(label, BorderLayout.SOUTH);
-      if(answer == correct){
-          Entity.fireCount1+=1;
-          System.out.println(Entity.fireCount1);
-      }
-      else
-
 
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    if(Entity.fireCount1 <3){
+                String text = answerbox.getText();
+                int answer = Integer.parseInt(text);
+                    if(Entity.fireCount1 == 0){
                         questionpopup();
-                        System.out.println(answer);
+                        sd.screen.setVisible(false);
+                        sd.screen.dispose();
+                        System.out.println(answer+"= ANSWER");
+                        if(answer == correct){
+                            Entity.fireCount1++;
+                            System.out.println(Entity.fireCount1+ "= FIRECOUNT");
+                        }
+                        else
+                            System.out.println("WRONG");
+                        sd.screen.setVisible(false);
+                        sd.screen.dispose();
+                            //questionpopup();
                     }
+                    else
+                        System.out.println("You already have a fireball spell cast available to you.");
+                        sd.screen.setVisible(false);
+                        sd.screen.dispose();
+
 
 
             }
