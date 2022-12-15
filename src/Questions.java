@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
@@ -24,24 +25,60 @@ public class Questions {
             }
         }
     }
-public void questionpopup(int counter){
+public void questionpopup(){
+
+    JTextField answerbox= new JTextField(20);
     ScreenDisplay sd = new ScreenDisplay();
     JButton button = new JButton("Continue");
-    JTextField answerbox= new JTextField(20);
+    JPanel panel = new JPanel();
+
+    sd.screen.setSize(250,250);
+    sd.screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    sd.screen.setVisible(true);
+    sd.screen.add(panel);
+
+    panel.add(button,BorderLayout.NORTH);
+    answerbox.setBounds(100,20,165,25);
+    panel.add(answerbox);
+    String text = answerbox.getText();
+    JLabel label;
+    int answer = Integer.parseInt(text);
+
+
+    int number1 = (int) (Math.random() * 10) + 10;
+    int number2 = (int) (Math.random() * 10) + 10;
+
+    String question ="What is " + number1 + "+" + number2 + "?";
+    int correct = (number1+number2);
+    label = new JLabel(question);
+    label.setBounds(10,20,80,25);
+    panel.add(label, BorderLayout.SOUTH);
+      if(answer == correct){
+          Entity.fireCount1+=1;
+          System.out.println(Entity.fireCount1);
+      }
+      else
+
+
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    if(Entity.fireCount1 <3){
+                        questionpopup();
+                        System.out.println(answer);
+                    }
+
+
+            }
+        });
 
 
 
-    for (int i = 0; i < 3; i++) {
+}
+public void nextq(int counter){
         JLabel label;
         JPanel panel = new JPanel();
 
-        sd.screen.setSize(300,300);
-        sd.screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        sd.screen.setVisible(true);
-        sd.screen.add(panel);
-        panel.add(button);
-        answerbox.setBounds(100,20,165,25);
-        panel.add(answerbox);
         int number1 = (int) (Math.random() * 10) + 10;
         int number2 = (int) (Math.random() * 10) + 10;
 
@@ -49,7 +86,7 @@ public void questionpopup(int counter){
         int answer  = 1;
         label = new JLabel(question);
         label.setBounds(10,20,80,25);
-        panel.add(label);
+        panel.add(label, BorderLayout.SOUTH);
 
         if ((number1 + number2) != answer) {
 
@@ -59,19 +96,7 @@ public void questionpopup(int counter){
             counter++;
         }
     }
-
-
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-
-
-
 }
-
 
 
 
@@ -140,7 +165,7 @@ public void questionpopup(int counter){
         }
     }
  */
-}
+
 
 
 

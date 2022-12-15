@@ -10,7 +10,7 @@ public class Main {
         //screen.runGameThread();
 
         Questions q = new Questions();
-        q.questionpopup(Entity.fireCount1);
+        q.questionpopup();
 
 
 
